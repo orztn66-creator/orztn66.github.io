@@ -629,3 +629,69 @@ function closeSocialModal() {
 }
 
 // 3. [ลบ] เราลบ addEventListener ทิ้ง เพราะเราใช้ onclick ใน HTML แล้ว
+/* ================================================= */
+/* ส่วนที่เพิ่มใหม่: Logic สำหรับหน้าคู่มือเช็คระยะ */
+/* ================================================= */
+
+function showCheckUpGuide() {
+    // ซ่อนหน้ารายการบริการเดิม
+    const serviceList = document.getElementById('service-content-list');
+    if(serviceList) serviceList.style.display = 'none';
+
+    // แสดง Container ของคู่มือ
+    const guideContent = document.getElementById('check-up-guide-content');
+    if(guideContent) guideContent.style.display = 'block';
+
+    // รีเซ็ตให้แสดงหน้าสารบัญ (TOC) ก่อนเสมอ
+    showStepContent(0);
+}
+
+function showServiceList() {
+    // แสดงหน้ารายการบริการเดิมกลับมา
+    const serviceList = document.getElementById('service-content-list');
+    if(serviceList) serviceList.style.display = 'block';
+
+    // ซ่อนคู่มือ
+    const guideContent = document.getElementById('check-up-guide-content');
+    if(guideContent) guideContent.style.display = 'none';
+    
+    window.scrollTo(0, 0);
+}
+
+function showStepContent(step) {
+    // ดึง Element ทั้งหมด
+    const tocView = document.getElementById('toc-view');
+    const step1 = document.getElementById('step1-view');
+    const step2 = document.getElementById('step2-view');
+    const step3 = document.getElementById('step3-view');
+
+    // ซ่อนทั้งหมดก่อน (Safety check: ตรวจว่ามี element จริงไหมก่อนสั่ง style)
+    if(tocView) tocView.style.display = 'none';
+    if(step1) step1.style.display = 'none';
+    if(step2) step2.style.display = 'none';
+    if(step3) step3.style.display = 'none';
+
+    // แสดงเฉพาะส่วนที่เลือก
+    if (step === 1 && step1) {
+        step1.style.display = 'block';
+    } else if (step === 2 && step2) {
+        step2.style.display = 'block';
+    } else if (step === 3 && step3) {
+        step3.style.display = 'block';
+    } else {
+        // ค่า Default หรือ 0 ให้กลับไปหน้าสารบัญ
+        if(tocView) tocView.style.display = 'block';
+    }
+    
+    // เลื่อนจอขึ้นบนสุด
+    window.scrollTo(0, 0);
+}
+
+// ตรวจสอบเมื่อโหลดหน้า (กรณีใส่ใน HTML body onload)
+// เพื่อซ่อนส่วนคู่มือไว้ก่อน
+document.addEventListener("DOMContentLoaded", function() {
+    const guideContent = document.getElementById('check-up-guide-content');
+    if(guideContent) {
+        guideContent.style.display = 'none';
+    }
+});
