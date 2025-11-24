@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อู่รถเบนซ์ | pvd auto garage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'segoe ui', sans-serif;
+            background-color: #111;
+            color: #eee;
+        }
+
+        header {
+            background: #000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            height: 60px;
+        }
+
+        header h1 {
+            color: #00aaff;
+            margin: 0;
+        }
+
+        nav a {
+            color: #eee;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: #eee;
+            cursor: pointer;
+        }
+
+        .hero {
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #000;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-background-img {
+            width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+            object-position: center bottom;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 50px;
+                padding: 10px 20px;
+            }
+
+            .hero {
+                margin-top: 50px;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background: #111;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+                padding: 10px 0;
+                z-index: 999;
+            }
+
+            nav a {
+                margin: 10px 20px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        .section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+            display: none;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #00aaff;
+            color: #000;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #about {
+            padding-top: 60px;
+        }
+
+        /* CSS สำหรับไอคอน ab.jpg ที่ถูกปรับให้เล็ก 35px */
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* ปรับใหม่: เพิ่ม position: relative เพื่อให้วางสัญลักษณ์ Play ทับได้ */
+        .info-icon-link {
+            display: block;
+            line-height: 0;
+            position: relative;
+        }
+
+        .info-icon {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            border-radius: 10px;
+            /* ทำให้รูปภาพดูจางลงเล็กน้อยเพื่อให้สัญลักษณ์ Play เด่นขึ้น */
+            opacity: 0.85;
+        }
+
+        /* โค้ดใหม่: สัญลักษณ์ Play (สามเหลี่ยม) วางทับ */
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            /* ขนาดของสัญลักษณ์ */
+            color: rgba(255, 255, 255, 0.9);
+            /* สีขาว */
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+            /* เพิ่มเงาเพื่อความชัดเจน */
+            pointer-events: none;
+            /* ทำให้คลิกทะลุไปที่ลิงก์ด้านล่างได้ */
+        }
+
+        .info-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00aaff;
+        }
+
+        /* ************************************************* */
+        /* *** CSS ใหม่สำหรับวิดีโอที่ฝังแบบซ้าย-ขวา *** */
+        /* ************************************************* */
+
+        .video-gallery {
+            display: flex;
+            gap: 30px;
+            /* ระยะห่างระหว่างวิดีโอ */
+            margin-top: 20px;
+        }
+
+        .video-card {
+            flex: 1;
+            /* ทำให้การ์ดทั้งสองมีขนาดเท่ากัน */
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        .video-card iframe {
+            display: block;
+        }
+
+        .video-details {
+            padding: 15px;
+        }
+
+        .video-details h3 {
+            margin-top: 0;
+            color: #00aaff;
+            font-size: 1.2em;
+        }
+
+        .video-details p {
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        .watch-link {
+            display: inline-block;
+            color: #00aaff;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .watch-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .video-gallery {
+                flex-direction: column;
+                /* เรียงวิดีโอในแนวตั้งเมื่ออยู่บนมือถือ */
+                gap: 20px;
+            }
+        }
+        /* ************************************************* */
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            background: #1a1a1a;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .service-item:hover {
+            background: #222;
+        }
+
+        .service-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 6px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .service-item .service-text {
+            flex: 1;
+        }
+
+        .service-item .service-text h3 {
+            margin: 0 0 10px;
+            color: #00aaff;
+        }
+
+        .service-item .service-text p {
+            margin: 0;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .service-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .service-item img {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+
+            .service-item .service-text {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background: #000;
+            padding: 30px;
+            text-align: center;
+            color: #aaa;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>pvd auto garage</h1>
+        <nav id="main-nav">
+            <a onclick="showSection('about')">เกี่ยวกับเรา</a>
+            <a onclick="showSection('services')">บริการ</a>
+            <a onclick="showSection('media')">สื่อ</a>
+            <a onclick="showSection('testimonials')">รีวิว</a>
+            <a onclick="showSection('contact')">ติดต่อ</a>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <img src="hero1.jpg" alt="อู่ซ่อมเบนซ์ pvd auto garage" class="hero-background-img">
+    </section>
+
+    <section id="about" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>เกี่ยวกับเรา</h2>
+
+        <div class="info-item">
+            <a class="info-icon-link" href="https://www.youtube.com/embed/watch?v=ehSkrHD7M8U" target="_blank">
+                <img class="info-icon" src="ab.jpg" alt="วิดีโอเกี่ยวกับ PVD">
+                <span class="play-overlay">
+                    &#9654;
+                </span>
+            </a>
+
+            <span class="info-label">เกี่ยวกับ pvd</span>
+        </div>
+
+        <p>
+            อู่ pvd auto garage เชี่ยวชาญด้านการซ่อมและบำรุงรักษารถ mercedes-benz
+            ด้วยทีมช่างประสบการณ์กว่า 15 ปี พร้อมเครื่องมือมาตรฐานยุโรป
+        </p>
+
+    </section>
+
+    <section id="media" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>วิดีโอเจาะลึก</h2>
+        <div class="video-gallery">
+            <div class="video-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/KZPOgFKC1x4"
+                    title="YouTube video player 1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-details">
+                    <h3>pvd auto (12:10)</h3>
+                    <p>
+                        สรุปแนวคิด, ปณิธาน, และพันธกิจของ PVD ที่เริ่มต้นจากประสบการณ์ผู้ใช้รถ สู่การเป็นอู่ที่เน้นความโปร่งใส รับประกันงานซ่อมสูง (ดีกว่าศูนย์) พร้อมนโยบายไม่พอใจไม่คิดเงิน.
+                    </p>
+                    <a href="https://youtu.be/KZPOgFKC1x4" target="_blank" class="watch-link">ดูวิดีโอเต็ม</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/f__1YWQ64BM"
+                    title="YouTube video player 2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-details">
+                    <h3>บทสัมภาษณ์ (13:55)</h3>
+                    <p>
+                        บทสัมภาษณ์เจาะลึกที่มาของ PVD การยึดมั่นในความรับผิดชอบ กระบวนการทำงานที่เป็นระบบ (วิเคราะห์เชิงลึก) และการสร้างความมั่นใจสูงสุดด้วยการให้ลูกค้าทดลองขับก่อนชำระเงิน.
+                    </p>
+                    <a href="https://youtu.be/f__1YWQ64BM" target="_blank" class="watch-link">ดูวิดีโอเต็ม</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>บริการของเรา</h2>
+        <div class="services">
+            <div class="service-item" onclick="window.location.href='engine.html'">
+                <img src="s1.jpg" alt="ซ่อมเครื่องยนต์ / เกียร์">
+                <div class="service-text">
+                    <h3>ซ่อมเครื่องยนต์ / เกียร์</h3>
+                    <p>
+                        ตรวจเช็กและซ่อมแซมระบบหลักของรถ
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-item" onclick="window.location.href='oil.html'">
+                <img src="s2.jpg" alt="เช็กระยะ / น้ำมันเครื่อง">
+                <div class="service-text">
+                    <h3>เช็กระยะ / น้ำมันเครื่อง</h3>
+                    <p>
+                        ดูแลตามมาตรฐานศูนย์
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-item" onclick="window.location.href='electrical.html'">
+                <img src="s1.jpg" alt="ระบบไฟฟ้า / แอร์">
+                <div class="service-text">
+                    <h3>ระบบไฟฟ้า / แอร์</h3>
+                    <p>
+                        แก้ไขปัญหาความเย็นและระบบไฟ
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-item" onclick="window.location.href='restore.html'">
+                <img src="s2.jpg" alt="เคลือบสี / ฟื้นฟูสภาพ">
+                <div class="service-text">
+                    <h3>เคลือบสี / ฟื้นฟูสภาพ</h3>
+                    <p>
+                        คืนความเงางามให้รถของคุณ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>รีวิวลูกค้า</h2>
+        <p>
+            "บริการดีมาก ซ่อมไว ราคาสมเหตุสมผล รถเบนซ์ผมกลับมาวิ่งเหมือนใหม่" – คุณสมชาย
+        </p>
+    </section>
+
+    <section id="contact" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>ติดต่อเรา</h2>
+        <p>
+            📍 123 ถนนสุขุมวิท กรุงเทพฯ
+        </p>
+        <p>
+            📞 081-234-5678
+        </p>
+        <p>
+            ✉️ infopvdautogarage.com
+        </p>
+    </section>
+
+    <footer id="main-footer">
+        <p>
+            © 2025 pvd auto garage. all rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        function goHome() {
+            // 1. ซ่อน Section ทั้งหมด
+            const allSections = document.querySelectorAll('.section');
+            allSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 2. แสดง Hero Section และ Footer
+            document.getElementById('hero-section').style.display = 'flex';
+            document.getElementById('main-footer').style.display = 'block';
+
+            // 3. เลื่อนหน้าจอขึ้นไปบนสุด
+            window.scrollTo(0, 0);
+        }
+
+        // ฟังก์ชันสำหรับแสดง Section ที่เลือกเพียงส่วนเดียว (หน้าจอใหม่)
+        function showSection(targetId) {
+            // 1. ซ่อน Hero Section และ Footer ทั้งหมด
+            document.getElementById('hero-section').style.display = 'none';
+            document.getElementById('main-footer').style.display = 'none';
+
+            // 2. ซ่อน Section อื่นๆ ทั้งหมด
+            const allSections = document.querySelectorAll('.section');
+            allSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 3. แสดงเฉพาะ Section ที่ถูกคลิก
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.style.display = 'block';
+            }
+
+            // 4. ปิดเมนูสำหรับมือถือ (ถ้ากำลังเปิดอยู่)
+            const nav = document.getElementById('main-nav');
+            nav.classList.remove('active');
+
+            // 5. เลื่อนหน้าจอขึ้นไปบนสุด (จำลองการเปลี่ยนหน้าใหม่)
+            window.scrollTo(0, 0);
+        }
+
+        // เมื่อโหลดหน้าเว็บ: ต้องเรียก goHome() เพื่อให้แน่ใจว่าแสดงเฉพาะ Hero + Footer
+        document.addEventListener('DOMContentLoaded', () => {
+            goHome();
+        });
+
+    </script>
+
+</body>
+</html>

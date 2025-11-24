@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อู่รถเบนซ์ | pvd auto garage</title>
+    <meta name="description" content="อู่ PVD AUTO GARAGE เชี่ยวชาญซ่อมเบนซ์ (Mercedes-Benz) ด้วยทีมช่างประสบการณ์กว่า 15 ปี เน้นความโปร่งใส รับประกันงานซ่อมสูง และมีนโยบายไม่พอใจไม่คิดเงิน">
+    
+    <link rel="canonical" href="https://www.pvdautogarage.com/index.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "pvd auto garage",
+      "image": "pvd-video-concept.jpg", 
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 ถนนสุขุมวิท",
+        "addressLocality": "กรุงเทพฯ",
+        "addressCountry": "TH"
+      },
+      "url": "https://www.pvdautogarage.com/",
+      "telephone": "081-234-5678",
+      "email": "infopvdautogarage.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "serviceType": [
+        "ซ่อมเครื่องยนต์ Mercedes-Benz",
+        "ซ่อมเกียร์ Mercedes-Benz",
+        "เช็กระยะ",
+        "ระบบไฟฟ้า",
+        "ระบบแอร์"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "pvd auto (12:10) - แนวคิดและปณิธาน",
+      "description": "สรุปแนวคิด, ปณิธาน, และพันธกิจของ PVD ที่เริ่มต้นจากประสบการณ์ผู้ใช้รถ สู่การเป็นอู่ที่เน้นความโปร่งใส รับประกันงานซ่อมสูง (ดีกว่าศูนย์) พร้อมนโยบายไม่พอใจไม่คิดเงิน.",
+      "uploadDate": "2024-01-01", 
+      "duration": "PT12M10S", 
+      "thumbnailUrl": "pvd-video-concept.jpg", 
+      "embedUrl": "https://www.youtube.com/embed/ehSkrHD7M8U"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "อู่ซ่อมรถยุโรป อ่อนนุช สุขุมวิท 50 (13:55)",
+      "description": "วิดีโอเจาะลึกที่มาของ PVD, การยึดมั่นในความรับผิดชอบ, กระบวนการทำงานที่เป็นระบบ (วิเคราะห์เชิงลึก) และการสร้างความมั่นใจสูงสุดด้วยการให้ลูกค้าทดลองขับก่อนชำระเงิน.",
+      "uploadDate": "2025-10-20", 
+      "duration""PT13M55S", 
+      "thumbnailUrl": "pvd-video-onnuch.jpg", 
+      "embedUrl": "https://www.youtube.com/embed/f__1YWQ64BM"
+    }
+    </script>
+    <style>body{margin:0;font-family:'segoe ui',sans-serif;background-color:#111;color:#eee;}header{background:#000;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:1000;box-sizing:border-box;height:60px;}header h1{color:#00aaff;margin:0;font-size:1.5em;}nav a{color:#eee;margin-left:20px;text-decoration:none;font-weight:500;cursor:pointer;}nav>a,.submenu-group>a{display:inline-block;padding:0 0 4px 0;border-bottom:2px solid transparent;transition:border-bottom .2s,color .2s;}nav>a:hover,.submenu-group>a:hover{color:#00aaff;border-bottom:2px solid #00aaff;}.submenu-group{position:relative;display:inline-block;margin-left:20px;}.submenu-group>a{color:#eee;text-decoration:none;font-weight:500;cursor:pointer;margin-left:0;}.dropdown-content{display:none;position:absolute;background-color:#222;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.4);z-index:1001;border-top:2px solid #00aaff;top:100%;left:0;padding:5px 0;border-radius:0 0 5px 5px;}.dropdown-content a{color:#eee;padding:12px 16px 12px 12px;text-decoration:none;display:block;text-align:left;margin:0;white-space:nowrap;border-left:4px solid transparent;transition:border-left .2s;}.dropdown-content a:hover{background-color:#333;color:#00aaff;border-left:4px solid #00aaff;}.menu-toggle{display:none;font-size:30px;background:none;border:none;color:#eee;cursor:pointer;}
+    /* NEW CSS for Check Status Button in Header */
+    #check-status-button {
+        display: flex;
+        align-items: center;
+        margin-right: 15px; /* Separate from menu-toggle */
+        height: 40px; /* Align with other elements */
+    }
+    .chk-button-img {
+        width: 40px; /* Icon size */
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #00aaff;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+    .chk-button-img:hover {
+        transform: scale(1.1);
+        border-color: #eee;
+    }
+    
+    .hero{margin-top:60px;width:100%;display:flex;justify-content:center;align-items:flex-start;background-color:#000;overflow:hidden;text-align:center;}.hero-background-img{width:100%;max-height:100vh;object-fit:contain;object-position:center bottom;}.new-brand-section{width:100%;display:flex;justify-content:center;align-items:flex-start;background-color:#000;overflow:hidden;text-align:center;padding:0 0;}@media (max-width: 768px){header{height:50px;padding:10px 20px;}.hero{margin-top:50px;}nav{display:none;flex-direction:column;position:absolute;top:50px;left:0;width:100%;background:#111;box-shadow:0 8px 16px rgba(0,0,0,0.4);padding:10px 0;z-index:999;}nav a,.submenu-group{margin:10px 20px;text-align:center;width:auto;}.dropdown-content{position:static;width:100%;box-shadow:none;border-top:none;background-color:#1a1a1a;}.dropdown-content a{padding:8px 30px;}nav.active{display:flex;}.menu-toggle{display:block;}.section{padding:40px 20px;}}
+
+.back-button{display:inline-block;background:#00aaff;color:#000;padding:10px 20px;margin-bottom:30px;border-radius:5px;text-decoration:none;font-weight:bold;cursor:pointer;}#about{padding-top:60px;}
+
+    /* === โค้ดที่เพิ่ม/แก้ไขสำหรับส่วน "เกี่ยวกับเรา" (#about) *UPDATED CSS* === */
+    .info-item {
+        margin-bottom: 0; 
+        gap: 0; 
+    }
+
+    /* โค้ดใหม่สำหรับจัดเรียงแนวนอนในส่วน "เกี่ยวกับเรา" */
+    .video-info-container {
+        display: flex;
+        gap: 30px; 
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .video-box {
+        flex: 1 1 50%; 
+        max-width: 50%;
+        position: relative;
+        padding-top: 28.125%; /* 56.25% (16:9) / 2 = 28.125% */
+        height: 100; 
+        overflow: hidden;
+        cursor: pointer; 
+    }
+    .video-box > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 10px; 
+    }
+
+    .info-icon {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        opacity: 0.85;
+        border-radius: 10px; 
+        display: block; /* *FIXED: ให้แสดงเป็น Block เสมอ* */
+    }
+
+    .info-details-box {
+        flex: 1 1 50%; 
+        padding-top: 10px; 
+    }
+
+    .info-details-box p {
+        color: #ccc;
+        line-height: 1.6;
+    }
+    
+    .info-label{font-size:18px;font-weight:bold;color:#00aaff;}
+    .play-overlay{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size:64px;
+        color:rgba(255,255,255,0.9);
+        text-shadow:0 0 10px black;
+        pointer-events:none;
+        display: block; /* *FIXED: ให้แสดงเป็น Block เสมอ* */
+    } 
+
+    /* iframe responsive fix */
+    iframe.active-video {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+    }
+    
+    /* *NEW: กฎสำหรับซ่อน Thumbnail และ Play Overlay เมื่อวิดีโอกำลังเล่น* */
+    .video-box[data-video-played="true"] .info-icon,
+    .video-box[data-video-played="true"] .play-overlay {
+        display: block !important;
+block
+
+    /* ปรับ Media Query สำหรับมือถือในส่วน #about *//* คัดลอกโค้ดนี้ไปใส่ในไฟล์ CSS ของคุณ */
+@media (max-width: 768px) {
+    .video-info-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .video-box, .info-details-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .video-box {
+        padding-top: 56.25%; /* 16:9 aspect ratio สำหรับ 100% width */
+    }
+    .info-details-box {
+        padding-top: 0;
+    }
+    /* **[แก้ไขตามคำขอ]: ยืนยันว่าไอคอนแสดงผลเสมอในมือถือ (ถ้าวิดีโอไม่ถูกเล่น)** */
+    #about .info-icon,
+    #about .play-overlay {
+        display: block !important; 
+    }
+    /* *NEW: Ensure active video is responsive on mobile* */
+    iframe.active-video {
+        height: 100% !important;
+        aspect-ratio: auto;
+    }
+}
+
+
+        /* *NEW: Ensure active video is responsive on mobile* */
+        iframe.active-video {
+            height: 100% !important;
+            aspect-ratio: auto;
+        }
+    }
+    /* === สิ้นสุดโค้ดที่เพิ่ม/แก้ไขสำหรับส่วน "เกี่ยวกับเรา" (#about) === */
+    
+    /* === NEW CSS: Check Status Section Styles (Adapted from original request) === */
+    .status-box {
+      background: #222; /* Darker background */
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      max-width: 400px;
+      margin: 30px auto;
+      text-align: center;
+    }
+    .status-box h2 {
+        color: #00aaff;
+        margin-top: 0;
+    }
+    .status-box input[type="text"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #333;
+      color: #eee;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    .status-box button {
+      padding: 0.75rem 1.5rem;
+      background: #00aaff;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .status-box button:hover {
+      background: #33cfff;
+    }
+    #result p {
+        margin-top: 1rem;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    /* === END NEW CSS: Check Status Section Styles === */
+
+    .video-cards-wrapper{max-width:1200px;width:100%;margin:20px auto;display:flex;gap:30px;justify-content:space-between;flex-wrap:wrap;}.video-card{height:500px;flex:1 1 45%;min-width:300px;max-width:585px;background:#1a1a1a;border-radius:8px;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column;}.video-player{height:300px;position:relative;overflow:hidden;width:100%;}.video-card iframe{width:100%;height:100%;display:none;}.video-thumbnail-container{position:relative;width:100%;height:300px;overflow:hidden;cursor:pointer;margin-bottom:0;}.video-play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:rgba(0,0,0,0.6);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;transition:background 0.3s;}.video-play-button::after{content:"\25B6";font-size:24px;color:#fff;margin-left:5px;}.video-thumbnail-container:hover .video-play-button{background:rgba(0,0,0,0.8);}.video-details{height:200px;padding:15px;position:relative;color:#f0f0f0;overflow:hidden;box-sizing:border-box;}.video-details h3{margin-top:0;color:#00aaff;font-size:1.2em;}.description-text{max-height:100px;overflow:hidden;line-height:1.5;transition:max-height 0.3s ease;}.description-expanded .description-text{max-height:none;}.read-more-fade{position:absolute;bottom:45px;left:0;right:0;height:30px;background:linear-gradient(transparent,#1a1a1a 90%);pointer-events:none;z-index:10;}.description-expanded .read-more-fade{display:none;}.read-more-btn{position:absolute;bottom:10px;right:15px;background:none;border:none;color:#4da6ff;cursor:pointer;font-weight:bold;z-index:20;}#media .facebook-video-cards-wrapper{max-width:1200px;width:100%;margin:20px auto;display:flex;gap:30px;justify-content:space-between;flex-wrap:wrap;}#media .facebook-video-card{flex:1 1 45%;min-width:300px;max-width:585px;padding:0;border-radius:8px;background:#1a1a1a;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;}#media .facebook-video-card iframe{width:100%!important;height:300px!important;min-height:200px;display:none;}#media .facebook-video-card .video-details{height:200px;padding:15px;position:relative;color:#f0f0f0;overflow:hidden;box-sizing:border-box;}
+/* โค้ดที่ไว้รองรับ 3 กล่อง ถูกเก็บไว้ แต่ไม่มีผลเมื่อมี 4 กล่อง */
+#media .facebook-video-cards-wrapper::after{
+    content:"";
+    flex:1 1 45%; 
+    max-width:585px; 
+    height:0; 
+}
+/* >>> โค้ดที่เพิ่มเข้ามาสำหรับปุ่ม Facebook <<< */
+.facebook-link-button {
+    display: inline-block;
+    background-color: #4267B2; /* Facebook Blue */
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.facebook-link-button:hover {
+    background-color: #3b5a9a;
+}
+/* >>> สิ้นสุดโค้ดที่เพิ่มเข้ามาสำหรับปุ่ม Facebook <<< */
+@media (max-width: 768px){.video-cards-wrapper{flex-direction:column;gap:20px;margin:20px 0;}.video-card,.facebook-video-card{flex:1 1 100%;height:auto;max-width:100%;}.video-player,.video-thumbnail-container{height:200px;}.video-details{height:auto;}.description-text{max-height:80px;}.read-more-fade{bottom:35px;}}.promo-banner-container{width:100%;max-width:none;margin:0 auto;display:flex;padding:0;box-sizing:border-box;margin-bottom:20px;gap:20px;align-items:stretch;}.promo-box{flex:1 1 50%;min-width:0;max-width:50%;height:100%;display:flex;flex-direction:column;}.promo-box img{width:100%;height:100%;display:block;object-fit:cover;}@media (max-width: 768px){.promo-banner-container{flex-direction:column;padding:0;align-items:center;}.promo-box{max-width:100%;height:auto;}.promo-box img{object-fit:cover;height:auto;}}.service-item{display:flex;align-items:center;background:#1a1a1a;border-radius:8px;margin-bottom:20px;padding:20px;cursor:pointer;}.service-item:hover{background:#222;}.service-item img{width:120px;height:auto;border-radius:6px;margin-right:20px;object-fit:cover;}.service-item .service-text{flex:1;}.service-item .service-text h3{margin:0 0 10px;color:#00aaff;}.service-item .service-text p{margin:0;color:#ccc;}@media (max-width: 768px){.service-item{flex-direction:column;align-items:flex-start;}.service-item img{width:100%;margin:0 0 15px 0;}.service-item .service-text{width:100%;}}footer{background:#000;padding:30px;text-align:center;color:#aaa;}
+    
+    /* === โค้ด CSS ใหม่จาก services.html (ปรับให้เป็น Full-Width Stacked Card) === */
+    .service-container{
+        display:flex;
+        flex-direction: column; /* Force vertical stacking of the boxes */
+        gap:30px; /* Increased gap for better separation */
+        flex-wrap:nowrap;
+        justify-content:center;
+        margin-top:30px;
+        max-width: 100%; /* Ensure container uses full width of the section */
+    }
+    .service-box{
+        flex: 1 1 100%; /* Ensure each box takes full width */
+        max-width: 100%; /* Max width is full container width */
+        background:#1a1a1a;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 4px 10px rgba(0,0,0,0.5);
+        cursor:pointer;
+        transition:border .3s;
+        border:3px solid transparent;
+    }
+    .service-box:hover{
+        border-color:#00aaff;
+    }
+    .service-box img{
+        width:100%; /* Full width as requested */
+        height:auto;
+        object-fit:cover;
+        aspect-ratio: 16/9; /* Balanced aspect ratio */
+    }
+    .service-content{
+        padding:20px;
+        text-align:left; /* Align text to the left */
+    }
+    .service-content h3{
+        color:#00aaff; /* Main title in blue */
+        margin-top:0;
+        margin-bottom: 5px;
+        font-size:1.8em;
+    }
+    .service-content p{
+        color:#ccc; /* Description text in light gray */
+        margin-bottom:0;
+        font-weight:400;
+        font-size: 1.1em;
+    }
+    .modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.9);padding-top:60px;}.modal-content{margin:5% auto;background-color:#1a1a1a;color:#eee;border-radius:8px;max-width:800px;padding:0;box-shadow:0 5px 15px rgba(0,0,0,0.7);}.modal-image{width:100%;height:auto;max-height:400px;object-fit:cover;border-radius:8px 8px 0 0;}.modal-body{padding:30px;}.modal-body h2{color:#00aaff;margin-top:0;}.close-btn{color:#fff;font-size:30px;font-weight:bold;position:absolute;top:20px;right:35px;cursor:pointer;transition:color .3s;}.close-btn:hover,.close-btn:focus{color:#00aaff;text-decoration:none;}
+    @media (max-width: 768px){
+        .service-container{gap:20px;}
+        .service-box{max-width:100%;}
+        .service-box img{aspect-ratio: 4/3;} /* Taller image on mobile */
+        .service-content{padding: 15px;}
+        .service-content h3{font-size: 1.5em;}
+        .modal-content{margin:20% 10px;}
+    }
+    /* === สิ้นสุดโค้ด CSS ใหม่สำหรับบริการ (Full-Width Stacked Card) === */
+    
+    /* === โค้ด CSS สำหรับ Slider 9 หมวดหลัก === */
+    .slider-modal-content {
+        position: relative;
+        padding: 0;
+        max-width: 900px; /* เพิ่มพื้นที่สำหรับสไลเดอร์ */
+        margin-top: 30px;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden; /* ซ่อนสไลด์ที่ไม่อยู่ในเฟรม */
+    }
+
+    .mySlides {
+        display: none;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .slide-content-box {
+        padding: 20px 30px;
+        text-align: left;
+    }
+    .slide-content-box h3 {
+        color: #00aaff; /* *แก้ไข: เปลี่ยนสีเป็นฟ้าตามคำขอ* */
+        margin-top: 0;
+        font-size: 2em;
+        border-bottom: 2px solid #00aaff;
+        padding-bottom: 5px;
+    }
+    .slide-content-box p {
+        color: #ccc;
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 35%; /* *แก้ไข: ปรับจาก 50% ให้ลูกศรอยู่กึ่งกลางภาพ* */
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1001;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background with a little more opacity */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        color: #00aaff;
+    }
+
+    /* The dots/indicators */
+    .dot-container {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        background-color: #555;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active-dot, .dot:hover {
+        background-color: #00aaff;
+    }
+
+    /* Animation */
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @media (max-width: 768px) {
+        .prev, .next {
+            font-size: 20px;
+            padding: 10px;
+            top: 30%; /* *แก้ไข: ปรับสำหรับมือถือ* */
+        }
+        .slider-modal-content {
+            margin-top: 50px;
+        }
+        .slide-content-box {
+            padding: 15px 20px;
+        }
+        .slide-content-box h3 {
+            font-size: 1.5em;
+        }
+        .slide-content-box p {
+            font-size: 1em;
+        }
+    }
+    /* === สิ้นสุดโค้ด CSS สำหรับ Slider 9 หมวดหลัก === */
+    
+    /* === NEW CSS: Admin Panel Key Manager Styles (Renamed classes to prevent conflicts) === */
+    .admin-key-panel-wrapper {
+      display: flex; /* Main structure */
+      min-height: calc(100vh - 120px); /* Adjust height to fill screen minus header/footer */
+      background-color: #f4f4f4;
+      color: #333; /* Default text color for light theme */
+      margin: -60px -40px 0 -40px; /* Remove section padding for full width/height appearance */
+    }
+    .sidebar-admin {
+      width: 250px;
+      background-color: #2c3e50;
+      color: white;
+      padding-top: 20px;
+      flex-shrink: 0;
+    }
+    .sidebar-admin h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    .sidebar-admin ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar-admin ul li {
+      padding: 12px 20px;
+      border-bottom: 1px solid #34495e;
+    }
+    .sidebar-admin ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar-admin ul li:hover {
+      background-color: #1abc9c;
+    }
+    .content-admin {
+      flex-grow: 1;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+    .section-admin {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .section-admin h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    .section-admin input[type="text"], .section-admin input[type="password"] {
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Crucial for width: 100% */
+      color: #333; /* Ensure text is visible in light input */
+    }
+    .section-admin button {
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .section-admin button:hover {
+      background-color: #16a085;
+    }
+    /* === END NEW CSS: Admin Panel Key Manager Styles === */
+    </style>
+</head>
+<body onload="initializePage()">
+    <header>
+        <h1>pvd auto garage</h1>
+        <nav id="main-nav">
+            <a onclick="showSection('about')">เกี่ยวกับเรา</a>
+            <a onclick="showSection('services-page')">บริการ</a>
+            <span class="submenu-group">
+                <a onclick="toggleSubMenu(event,'media-submenu')">สื่อ ▾</a>
+                <div id="media-submenu" class="dropdown-content">
+                    <a onclick="showSection('media')">วิดีโอเจาะลึก</a>
+                    <a onclick="showSection('legendary-reviews')">⭐️ รีวิวในตำนาน</a>
+                </div>
+            </span>
+            <a onclick="showSection('testimonials')">รีวิวลูกค้า</a>
+            <a onclick="showSection('contact')">ติดต่อ</a>
+            <a onclick="showSection('admin-panel')">Admin Panel</a> 
+        </nav>
+        <a href="#" onclick="showSection('check-status')" id="check-status-button" title="เช็คสถานะการซ่อมรถ">
+            <img src="chk.jpg" alt="Check Status" class="chk-button-img">
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <img src="hero1.jpg" alt="อู่ซ่อมเบนซ์ pvd auto garage" class="hero-background-img">
+    </section>
+    <section class="new-brand-section" id="new-brand-section">
+        <img src="newbrand.jpg" alt="แบนเนอร์ New Brand บริการใหม่ PVD AUTO GARAGE" class="hero-background-img">
+    </section>
+
+    <section id="about" class="section">
+    <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+    <h2>เกี่ยวกับเรา</h2>
+    
+    <div class="responsive-video-info-container">
+        <div class="info-item video-box" onclick="playEmbeddedVideo()" data-video-played="false" style="position:relative;cursor:pointer;">
+            <img class="info-icon" src="pvd-video-concept.jpg" alt="วิดีโอเกี่ยวกับ PVD AUTO GARAGE">
+            <span class="play-overlay">▶</span>
+            <iframe id="pvdVideo" 
+                    src="https://www.youtube.com/embed/ehSkrHD7M8U?rel=0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen 
+                    style="display:none;border:none;"></iframe>
+        </div>
+
+        <div class="info-details-box">
+            <span class="info-label" style="font-size: 24px; margin-bottom: 10px; display: block;">เกี่ยวกับ PVD</span>
+            <p>อู่ PVD AUTO GARAGE เชี่ยวชาญด้านการซ่อมและบำรุงรักษารถ Mercedes-Benz ด้วยทีมช่างประสบการณ์กว่า 15 ปี พร้อมเครื่องมือมาตรฐานยุโรป</p>
+        </div>
+    </div>
+
+    <div class="video-info-container" style="margin-top: 30px;">
+        <div class="info-item video-box" onclick="playEmbeddedVideo2()" data-video-played="false" style="position:relative;cursor:pointer;">
+            <img class="info-icon" src="pvd-video-onnuch.jpg" alt="ภาพย่อวิดีโอ อู่ซ่อมรถยุโรป อ่อนนุช สุขุมวิท 50">
+            <span class="play-overlay">▶</span>
+            <iframe id="pvdVideo2" 
+                    src="https://www.youtube.com/embed/f__1YWQ64BM?rel=0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen 
+                    style="display:none;border:none;"></iframe>
+        </div>
+
+        <div class="info-details-box">
+            <span class="info-label" style="font-size: 24px; margin-bottom: 10px; display: block;">อู่ซ่อมรถยุโรป อ่อนนุช สุขุมวิท 50</span>
+            <p>วิดีโอเจาะลึกที่มาของ PVD, การยึดมั่นในความรับผิดชอบ, กระบวนการทำงานที่เป็นระบบ (วิเคราะห์เชิงลึก) และการสร้างความมั่นใจสูงสุดด้วยการให้ลูกค้าทดลองขับก่อนชำระเงิน. (13:55 นาที)</p>
+        </div>
+    </div>
+</section>
+
+    <section id="services-page" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        
+        <h2>บริการของเรา</h2>
+        <p>คลิกที่บริการแต่ละกล่องเพื่อดูรายละเอียดเพิ่มเติม</p>
+
+        <div class="service-container">
+            <div class="service-box" 
+                 onclick="openNineServicesSlider()">
+                <img src="ภาพรวม.jpg" alt="ภาพรวมบริการซ่อมบำรุง 9 หมวด">
+                <div class="service-content">
+                    <h3>ซ่อมบำรุง 9 หมวดหลัก</h3>
+                    <p>คลิกเพื่อดูรายละเอียดเชิงลึกงานซ่อมช่วงล่าง, เครื่องยนต์, เกียร์, ระบบไฟฟ้า, และอื่นๆ</p>
+                </div>
+            </div>
+
+            <div class="service-box" 
+                 onclick="openServiceModal('เช็กระยะ / เปลี่ยนถ่ายของเหลว','ถ่ายน้ำมัน.jpg','บริการเปลี่ยนน้ำมันเครื่อง, น้ำมันเกียร์, กรองอากาศ, และกรองน้ำมันเชื้อเพลิง โดยใช้น้ำมันคุณภาพสูงตรงตามสเปคโรงงานเพื่อให้รถยนต์มีสมรรถนะสูงสุด')">
+                <img src="ถ่ายน้ำมัน.jpg" alt="ภาพช่างกำลังถ่ายน้ำมันเครื่อง">
+                <div class="service-content">
+                    <h3>เช็กระยะ / น้ำมันเครื่อง</h3>
+                    <p>ดูแลตามมาตรฐาน Benz ทุกรุ่น</p>
+                </div>
+            </div>
+
+            <div class="service-box" 
+                 onclick="openServiceModal('ระบบไฟฟ้า / ฟื้นฟูสภาพ','เช็ค.jpg','เราซ่อมระบบไฟฟ้า, ระบบแอร์, ช่วงล่าง, เบรก, และรับฟื้นฟูสภาพสีรถยนต์ด้วยช่างผู้เชี่ยวชาญ พร้อมการตรวจเช็กละเอียดทุกขั้นตอนก่อนส่งมอบ')">
+                <img src="เช็ค.jpg" alt="ภาพช่างกำลังตรวจสอบรถพร้อมรายการเช็ก">
+                <div class="service-content">
+                    <h3>ระบบไฟฟ้า / ฟื้นฟู</h3>
+                    <p>งานซับซ้อนที่อู่ทั่วไปไม่จบ</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align:center; margin-top: 40px;">
+            <button class="back-button" style="background:#555; color:white;" onclick="tryAgainPopup()">
+                ทดสอบการนำทาง
+            </button>
+        </div>
+    </section>
+
+    <section id="check-status" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>เช็คสถานะการซ่อมรถ</h2>
+        <div class="status-box">
+            <input type="text" id="repairCode" placeholder="กรอกรหัสใบซ่อม เช่น PVD1234">
+            <button onclick="checkStatus()">ตรวจสอบ</button>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <section id="media" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>วิดีโอเจาะลึก</h2>
+        
+        <a href="https://www.facebook.com/siramate.phaetkun" target="_blank" class="facebook-link-button">
+            คลิกดูวิดีโอทั้งหมดเพิ่มเติมบน Facebook Page
+        </a>
+        
+        <div class="video-cards-wrapper">
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/KZPOgFKC1x4' onclick="loadYouTubeVideo(this,'youtube-media-1')">
+                        <img src="pvd-video-review.jpg" alt="รูปย่อวิดีโอ YouTube สรุปแนวคิด PVD AUTO" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="youtube-media-1"></div>
+                </div>
+                <div class="video-details">
+                    <h3>pvd auto (12:10)</h3>
+                    <p class="description-text" data-full-text="สรุปแนวคิด, ปณิธาน, และพันธกิจของ PVD ที่เริ่มต้นจากประสบการณ์ผู้ใช้รถ สู่การเป็นอู่ที่เน้นความโปร่งใส รับประกันงานซ่อมสูง (ดีกว่าศูนย์) พร้อมนโยบายไม่พอใจไม่คิดเงิน. มีการวิเคราะห์เชิงลึกเกี่ยวกับขั้นตอนการซ่อมที่แม่นยำและไม่พาออกทะเล">สรุปแนวคิด, ปณิธาน, และพันธกิจของ PVD ที่เริ่มต้นจากประสบการณ์ผู้ใช้รถ สู่การเป็นอู่ที่เน้นความโปร่งใส รับประกันงานซ่อมสูง (ดีกว่าศูนย์) พร้อมนโยบายไม่พอใจไม่คิดเงิน.</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/f__1YWQ64BM' onclick="loadYouTubeVideo(this,'youtube-media-2')">
+                        <img src="pvd-video-interview.jpg" alt="รูปย่อวิดีโอ YouTube บทสัมภาษณ์เจาะลึก PVD AUTO" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="youtube-media-2"></div>
+                </div>
+                <div class="video-details">
+                    <h3>บทสัมภาษณ์ (13:55)</h3>
+                    <p class="description-text" data-full-text="บทสัมภาษณ์เจาะลึกที่มาของ PVD การยึดมั่นในความรับผิดชอบ กระบวนการทำงานที่เป็นระบบ (วิเคราะห์เชิงลึก) และการสร้างความมั่นใจสูงสุดด้วยการให้ลูกค้าทดลองขับก่อนชำระเงิน. ทำให้มั่นใจได้ว่ารถที่ซ่อมเสร็จจะไม่มีปัญหาตามมา">บทสัมภาษณ์เจาะลึกที่มาของ PVD การยึดมั่นในความรับผิดชอบ กระบวนการทำงานที่เป็นระบบ (วิเคราะห์เชิงลึก) และการสร้างความมั่นใจสูงสุดด้วยการให้ลูกค้าทดลองขับก่อนชำระเงิน.</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+        </div>
+        <div class="facebook-video-cards-wrapper">
+            <div class="facebook-video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F689679494148620%2F&show_text=false&width=560&t=0' onclick="loadFacebookVideo(this,'facebook-video-1')">
+                        <img src="fb_reel_689679494148620.jpg" alt="รูปย่อวิดีโอ Facebook Reel งานซ่อมเบนซ์สุดซอยของ PVD" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="facebook-video-1"></div>
+                </div>
+                <div class="video-details">
+                    <h3>pvd auto</h3>
+                    <p class="description-text" data-full-text="สมัยนี้เข้าที่ผิดจบไม่จบอยู่ที่ดวง ที่pvd auto เฮียเน้นสุดซอยและงานประกันซ่อม นอกจาก งานซ่อมที่ไม่ออกทะเล แต่เฮียขายความจริงและ เฮียจบให้แบบสุดซอย ทุกงานซ่อม เฮียเน้นงาน ประกันงานหลังซ่อม เพราะทุกปัญหาเครื่อง เกียร์ หลังคาsunroof moonroof ช่วงล่าง แอร์ ระบบไฮบริด น้ำรั่ว ระบบไฟ หัวหมอนระเบิด เฮีย บี รับจบ ทุกงานซ่อมมีประกัน">สมัยนี้เข้าที่ผิดจบไม่จบอยู่ที่ดวง ที่pvd auto เฮียเน้นสุดซอยและงานประกันซ่อม นอกจาก งานซ่อมที่ไม่ออกทะเล แต่เฮียขายความจริงและ เฮียจบให้แบบสุดซอย ทุกงานซ่อม เฮียเน้นงาน ประกันงานหลังซ่อม เพราะทุกปัญหาเครื่อง เกียร์ หลังคาsunroof moonroof ช่วงล่าง แอร์ ระบบไฮบริด น้ำรั่ว ระบบไฟ หัวหมอนระเบิด เฮีย บี รับจบ ทุกงานซ่อมมีประกัน</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            
+            <div class="facebook-video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1364900008619434%2F&show_text=false&width=560&t=0' onclick="loadFacebookVideo(this,'facebook-video-2')">
+                        <img src="pvd-video-interview.jpg" alt="รูปย่อวิดีโอ Facebook Reel รับจบงานซ่อมเบนซ์ พร้อมงานประกัน" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="facebook-video-2"></div>
+                </div>
+                <div class="video-details">
+                    <h3>pvd auto</h3>
+                    <p class="description-text" data-full-text="รับจบพร้อมงานประกันซ่อม + รับส่งรถถึงที่ + ไม่เน้นมั่วแก้ไขตรงจุด ลค มีส่วนร่วมในการซ่อม + ที่เดียวไม ต้องย้ายให้วุ่นวาย, เรารับรองทุกปัญหาจบได้ที่เดียว">รับจบพร้อมงานประกันซ่อม + รับส่งรถถึงที่ + ไม่เน้นมั่วแก้ไขตรงจุด ลค มีส่วนร่วมในการซ่อม + ที่เดียวไม ต้องย้ายให้วุ่นวาย</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            
+            <div class="facebook-video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1356287366145937%2F&show_text=false&width=560&t=0' onclick="loadFacebookVideo(this,'facebook-video-3')">
+                        <img src="fb3.jpg" alt="รูปย่อวิดีโอ Facebook Reel ใหม่" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="facebook-video-3"></div>
+                </div>
+                <div class="video-details">
+                    <h3>pvd auto</h3> <p class="description-text" data-full-text="รับจบพร้อมงานประกันซ่อม + รับส่งรถถึงที่ + ไม่เน้นมั่วแก้ไขตรงจุด ลค มีส่วนร่วมในการซ่อม + ที่เดียวไม ต้องย้ายให้วุ่นวาย, เรารับรองทุกปัญหาจบได้ที่เดียว">รับจบพร้อมงานประกันซ่อม + รับส่งรถถึงที่ + ไม่เน้นมั่วแก้ไขตรงจุด ลค มีส่วนร่วมในการซ่อม + ที่เดียวไม ต้องย้ายให้วุ่นวาย</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+
+            <div class="facebook-video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2165192183976816%2F&show_text=false&width=560&t=0' onclick="loadFacebookVideo(this,'facebook-video-4')">
+                        <img src="fb4.jpg" alt="รูปย่อวิดีโอ Facebook Reel งานซ่อมเบนซ์ PVD ล่าสุด" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="facebook-video-4"></div>
+                </div>
+                <div class="video-details">
+                    <h3>pvd auto (อัปเดตงานซ่อม)</h3> 
+                    <p class="description-text" data-full-text="วิดีโออัปเดตงานซ่อมที่ PVD Auto Garage เน้นย้ำถึงกระบวนการทำงานที่ละเอียดรอบคอบ และการรับประกันงานซ่อมเต็มรูปแบบตามมาตรฐานของอู่">วิดีโออัปเดตงานซ่อมที่ PVD Auto Garage เน้นย้ำถึงกระบวนการทำงานที่ละเอียดรอบคอบ และการรับประกันงานซ่อมเต็มรูปแบบ</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="legendary-reviews" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>⭐️ รีวิวในตำนาน (Legendary Reviews)</h2>
+        <p>วิดีโอรวมรีวิวจากลูกค้าและงานซ่อมเชิงลึกที่ได้รับความไว้วางใจ</p>
+        
+        <div class="video-cards-wrapper">
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/b6xvu8sdOZE' onclick="loadYouTubeVideo(this,'legend-youtube-1')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP 07 งานจูน E20" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-1"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP 07 งานจูน E20 (4:02)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage โทร. 088-5565591 FB : https://www.facebook.com/pvdauto Tiktok: pvdautogarage #อู่ซ่อมรถ Benz BMW #สุขุมวิท #งานประหยัด และแรง #ลูกค้าขอแบบซิ่งๆ">งานจูน E20 เพื่อความประหยัดและความแรง ลูกค้าต้องการรถที่มีสมรรถนะสูง อู่ PVD AUTO GARAGE รับจบทุกความต้องการ</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/3OZHTbAkj-E' onclick="loadYouTubeVideo(this,'legend-youtube-2')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP. 06 งานซ่อม แก้ไขพวงมาลัย" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-2"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP. 06 งานซ่อม แก้ไขพวงมาลัย (0:20)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">วิดีโอส่งงานแก้ไขปัญหาพวงมาลัยรถยนต์ ซึ่งเป็นหนึ่งในงานซับซ้อนที่อู่ PVD AUTO GARAGE เชี่ยวชาญ</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/FBbhbzeQtPU' onclick="loadYouTubeVideo(this,'legend-youtube-3')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP 05 ส่งงาน แก้ไขระบบไฟ +ฝาท้ายปิดไม่ไม่ได้" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-3"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP 05 แก้ไขระบบไฟ +ฝาท้าย (1:17)</h3>
+                    <p class="description-text" data-full-text="อู่ซ่อมรถ Benz BMW #สุขุมวิท #ซ่อมช่วงล่างรถยนต์ #แก้ไขระบบไฟ #ตั้งศูนย์รถยนต์ #ถ่วงล้อ #เจียรจานเบรค #ซ่อม หลังคาsunroof moonroof #pvdautogarage">งานส่งมอบรถยนต์หลังแก้ไขปัญหาระบบไฟฟ้าและปัญหาฝาท้ายปิดไม่ได้ พร้อมบริการซ่อมครบวงจร</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/98SxPaAhVsQ' onclick="loadYouTubeVideo(this,'legend-youtube-4')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP20 ขอบคุณคุณลูกค้าที่ไว้ใจ" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-4"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP20 ขอบคุณคุณลูกค้า (3:05)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">วิดีโอแสดงความขอบคุณลูกค้าที่มอบความไว้วางใจให้ PVD AUTOGARAGE ดูแลรถยนต์</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/weHcR5HY-a8' onclick="loadYouTubeVideo(this,'legend-youtube-5')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP17.ฟังเสียงลูกค้า ส่งงานซ่อมหลังคา BMW" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-5"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP17 ซ่อมหลังคา BMW (2:40)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">วิดีโอส่งมอบงานซ่อมหลังคา (Sunroof/Moonroof) สำหรับรถ BMW พร้อมรับฟังเสียงตอบรับจากลูกค้า</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/c0yN5E9DLeI' onclick="loadYouTubeVideo(this,'legend-youtube-6')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP18 เรื่อง Sunroof Moonroofไว้ใจเรา" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-6"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP18 Sunroof Moonroof (2:56)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">ความเชี่ยวชาญในการซ่อมหลังคา Sunroof และ Moonroof ของอู่ PVD AUTO GARAGE</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/OlH0_Kv1s0U' onclick="loadYouTubeVideo(this,'legend-youtube-7')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP19 เรื่องหลังคา จบทุกเคลส" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-7"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP19 เรื่องหลังคา จบทุกเคลส (2:16)</h3>
+                    <p class="description-text" data-full-text="อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">วิดีโอส่งงานซ่อมหลังคา แสดงให้เห็นว่าสามารถจบปัญหาได้ทุกเคส</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/pvFtPAIkct0' onclick="loadYouTubeVideo(this,'legend-youtube-8')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube จบสวย ส่งงานซ่อมหลังคา" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-8"></div>
+                </div>
+                <div class="video-details">
+                    <h3>จบสวย ส่งงานซ่อมหลังคา (1:01)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">การส่งมอบงานซ่อมหลังคาที่เสร็จสมบูรณ์อย่างสวยงาม</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/_pZ_3j8LtoA' onclick="loadYouTubeVideo(this,'legend-youtube-9')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP.08 ส่งหลังคา sunroof moonroof เฮียบีรับจบไปอีก 1 เคลส" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-9"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP.08 ส่งหลังคา Sunroof Moonroof (2:36)</h3>
+                    <p class="description-text" data-full-text="การส่งมอบงานซ่อมหลังคา Sunroof Moonroof อีกเคสที่เฮียบีรับจบให้ลูกค้า">การส่งมอบงานซ่อมหลังคา Sunroof Moonroof อีกเคสที่เฮียบีรับจบให้ลูกค้า</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/BRXFUfoR6H4' onclick="loadYouTubeVideo(this,'legend-youtube-10')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP10 ส่งงาน Benz เปลี่ยนประเก็นฝา ทำความสะอาดเครื่องให้ เนียน" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-10"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP10 ส่งงาน Benz เปลี่ยนประเก็นฝา (2:16)</h3>
+                    <p class="description-text" data-full-text="อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น. งานส่งมอบรถ Benz หลังเปลี่ยนประเก็นฝาและทำความสะอาดเครื่องยนต์">งานส่งมอบรถ Benz หลังเปลี่ยนประเก็นฝาและทำความสะอาดเครื่องยนต์ ให้กลับมาเนียนเหมือนใหม่</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/BWx0SDHt9Eo' onclick="loadYouTubeVideo(this,'legend-youtube-11')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP.13 testวาล์ว รั่ว วาล์วยัน" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-11"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP.13 testวาล์ว รั่ว วาล์วยัน (0:39)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น. วิดีโอแสดงการทดสอบและวิเคราะห์ปัญหา วาล์วรั่ว วาล์วยัน">วิดีโอแสดงการทดสอบและวิเคราะห์ปัญหา วาล์วรั่ว วาล์วยัน</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/GhUw6urfuAo' onclick="loadYouTubeVideo(this,'legend-youtube-12')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP14 รีวิวจากลูกค้า แก้ปัญหาน้ำหาย" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-12"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP14 รีวิวจากลูกค้า แก้ปัญหาน้ำหาย (4:55)</h3>
+                    <p class="description-text" data-full-text="อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น. วิดีโอรีวิวจากลูกค้าที่มาแก้ไขปัญหาน้ำหล่อเย็นหาย">รีวิวจากลูกค้าที่มาแก้ไขปัญหาน้ำหล่อเย็นหาย ซึ่งเป็นปัญหาที่ต้องการความเชี่ยวชาญเฉพาะทาง</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/NGp8etjhptU' onclick="loadYouTubeVideo(this,'legend-youtube-13')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP16 เครื่องหลังคาไว้ใจเรา ส่งาน" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-13"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP16 เครื่องหลังคาไว้ใจเรา (2:31)</h3>
+                    <p class="description-text" data-full-text="แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น. ติดต่อสอบถาม ☎️ โทร. วิดีโอส่งมอบงานซ่อมระบบกลไกหลังคา">วิดีโอส่งมอบงานซ่อมระบบกลไกหลังคา ซึ่งเป็นงานที่ต้องการความแม่นยำสูง</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/pvFtPAIkct0' onclick="loadYouTubeVideo(this,'legend-youtube-14')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube จบสวย ส่งงานซ่อมหลังคา" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-14"></div>
+                </div>
+                <div class="video-details">
+                    <h3>จบสวย ส่งงานซ่อมหลังคา (1:01)</h3>
+                    <p class="description-text" data-full-text="pvdautogarage อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น.">การส่งมอบงานซ่อมหลังคาที่เสร็จสมบูรณ์อย่างสวยงาม</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/_pZ_3j8LtoA' onclick="loadYouTubeVideo(this,'legend-youtube-15')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP.08 ส่งหลังคา sunroof moonroof เฮียบีรับจบไปอีก 1 เคลส" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-15"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP.08 ส่งหลังคา Sunroof Moonroof (2:36)</h3>
+                    <p class="description-text" data-full-text="การส่งมอบงานซ่อมหลังคา Sunroof Moonroof อีกเคสที่เฮียบีรับจบให้ลูกค้า">การส่งมอบงานซ่อมหลังคา Sunroof Moonroof อีกเคสที่เฮียบีรับจบให้ลูกค้า</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-player">
+                    <div class="video-thumbnail-container" style="height:300px;" data-src='https://www.youtube.com/embed/BRXFUfoR6H4' onclick="loadYouTubeVideo(this,'legend-youtube-16')">
+                        <img src="pvd-video-concept.jpg" alt="รูปย่อวิดีโอ YouTube EP10 ส่งงาน Benz เปลี่ยนประเก็นฝา ทำความสะอาดเครื่องให้ เนียน" style="width:100%; height: 100%; object-fit: cover;">
+                        <div class="video-play-button"></div>
+                    </div>
+                    <div id="legend-youtube-16"></div>
+                </div>
+                <div class="video-details">
+                    <h3>EP10 ส่งงาน Benz เปลี่ยนประเก็นฝา (2:16)</h3>
+                    <p class="description-text" data-full-text="อู่อยู่ ซ.สามทหาร ถ.สุชุมวิท50 แผนที่: https://maps.app.goo.gl/pXxY4K9DqzZbTpWJA เปิดวัน จันทร์ - เสาร์ เวลา 9.00 - 18.00 น. งานส่งมอบรถ Benz หลังเปลี่ยนประเก็นฝาและทำความสะอาดเครื่องยนต์">งานส่งมอบรถ Benz หลังเปลี่ยนประเก็นฝาและทำความสะอาดเครื่องยนต์ ให้กลับมาเนียนเหมือนใหม่</p>
+                    <div class="read-more-fade"></div>
+                    <button class="read-more-btn">...เพิ่มเติม</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>รีวิวลูกค้า</h2>
+        <p>"บริการดีมาก ซ่อมไว ราคาสมเหตุสมผล รถเบนซ์ผมกลับมาวิ่งเหมือนใหม่" – คุณสมชาย</p>
+    </section>
+
+    <section id="contact" class="section">
+        <a onclick="goHome()" class="back-button">← กลับหน้าหลัก</a>
+        <h2>ติดต่อเรา</h2>
+        <p>📍 123 ถนนสุขุมวิท กรุงเทพฯ</p>
+        <p>📞 081-234-5678</p>
+        <p>✉️ infopvdautogarage.com</p>
+    </section>
+    
+    <section id="admin-panel" class="section" style="padding: 0;">
+        <a onclick="goHome()" class="back-button" style="margin: 20px;">← กลับหน้าหลัก</a>
+        
+        <div class="admin-key-panel-wrapper">
+            <div class="sidebar-admin">
+                <h2>รหัสคีย์ลูกค้า</h2>
+                <ul>
+                    <li><a href="#verify-key">ระบบตรวจสอบรหัส</a></li>
+                    <li><a href="#access-status">การเข้าถึงสถานะซ่อม</a></li>
+                    <li><a href="#manage-keys">จัดการรหัสซ่อม</a></li>
+                    <li><a href="#key-manager">Access Key Manager</a></li>
+                </ul>
+            </div>
+
+            <div class="content-admin">
+                <div id="verify-key" class="section-admin">
+                    <h3>ระบบตรวจสอบรหัส</h3>
+                    <p>กรอกรหัสคีย์ที่ลูกค้าใช้เพื่อเข้าถึงข้อมูล:</p>
+                    <input type="password" id="keyInput" placeholder="กรอกรหัสคีย์">
+                    <button onclick="checkKey()">ตรวจสอบ</button>
+                    <p id="keyMessage" style="color:red;"></p>
+                </div>
+
+                <div id="access-status" class="section-admin">
+                    <h3>การเข้าถึงสถานะซ่อม</h3>
+                    <p>กำหนดสิทธิ์การเข้าถึงข้อมูลซ่อมตามรหัสคีย์:</p>
+                    <input type="text" placeholder="เช่น PVD12345 - เข้าถึงเฉพาะสถานะล่าสุด">
+                    <button>บันทึกสิทธิ์</button>
+                </div>
+
+                <div id="manage-keys" class="section-admin">
+                    <h3>จัดการรหัสซ่อม</h3>
+                    <p>เพิ่ม / ลบ / แก้ไขรหัสคีย์ที่ผูกกับใบรับซ่อม:</p>
+                    <input type="text" placeholder="เพิ่มรหัสใหม่ เช่น PVDVIP001">
+                    <button>เพิ่มรหัส</button>
+                </div>
+
+                <div id="key-manager" class="section-admin">
+                    <h3>Access Key Manager</h3>
+                    <p>ดูภาพรวมการใช้งานรหัสคีย์:</p>
+                    <button>Export รายการรหัส</button>
+                    <button>ดูประวัติการใช้งาน</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="extra-promo-banner-section" class="promo-banner-section">
+        <div class="promo-banner-container">
+            <div class="promo-box">
+                <img src="ราคาโปร่งใส.jpg" alt="ราคาโปร่งใส PVD AUTO">
+            </div>
+            <div class="promo-box">
+                <img src="ยืนหนึ่ง.jpg" alt="ยืนหนึ่งเรื่องซ่อมบำรุง PVD AUTO">
+            </div>
+        </div>
+    </section>
+
+    <section id="promo-banner-section" class="promo-banner-section">
+        <div class="promo-banner-container">
+            <div class="promo-box">
+                <img src="ลากรถ.jpg" alt="บริการลากรถถึงที่">
+            </div>
+            <div class="promo-box">
+                <img src="รับประกัน.jpg" alt="รับประกันงานเคลมได้ 100%">
+            </div>
+        </div>
+    </section>
+
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeServiceModal()">×</span>
+        <img id="modalImage" class="modal-image" src="" alt="Service Detail Image">
+        <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="nineServicesSliderModal" class="modal">
+        <div class="modal-content slider-modal-content">
+            <span class="close-btn" onclick="closeNineServicesSlider()">×</span>
+            <div class="slideshow-container">
+                </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div style="text-align:center; padding: 10px 0;">
+                <div id="slide-indicators" class="dot-container">
+                    </div>
+                <p id="slide-position-text" style="color: #00aaff; font-weight: bold; margin-top: 5px;"></p>
+            </div>
+            
+            <div style="text-align: center; padding: 10px 0 20px;">
+                <button class="back-button" onclick="closeNineServicesSlider()" style="margin-bottom: 0;">
+                    ปิด (Close)
+                </button>
+            </div>
+            </div>
+    </div>
+
+    <footer id="main-footer">
+        <p>© 2025 pvd auto garage. all rights reserved.</p>
+    </footer>
+
+    <script>
+        function initializePage(){const allSections=document.querySelectorAll('.section');allSections.forEach(section=>{section.style.display='none';});const heroSection=document.getElementById('hero-section');if(heroSection){heroSection.style.display='flex';}goHome();const promoBanner=document.getElementById('promo-banner-section');if(promoBanner){promoBanner.style.display='block';}const extraPromoBanner=document.getElementById('extra-promo-banner-section');if(extraPromoBanner){extraPromoBanner.style.display='block';}}
+        
+        function toggleMenu(){const nav=document.getElementById('main-nav');nav.classList.toggle('active');}function toggleSubMenu(event,submenuId){event.preventDefault();const submenu=document.getElementById(submenuId);document.querySelectorAll('.dropdown-content').forEach(menu=>{if(menu.id!==submenuId){menu.style.display='none';}});if(submenu.style.display==='block'){submenu.style.display='none';}else{submenu.style.display='block';}}
+        
+        // *แก้ไข: ให้ footer แสดงผลทุกครั้งที่กลับหน้าหลัก*
+        function goHome(){
+            const allSections=document.querySelectorAll('.section');
+            allSections.forEach(section=>{section.style.display='none';});
+            document.getElementById('hero-section').style.display='flex';
+            document.getElementById('new-brand-section').style.display='flex';
+            document.getElementById('promo-banner-section').style.display='block';
+            document.getElementById('extra-promo-banner-section').style.display='block';
+            document.getElementById('main-footer').style.display='block'; // *ตรวจสอบให้ footer แสดง*
+            document.querySelectorAll('.dropdown-content').forEach(menu=>{menu.style.display='none';});
+            window.scrollTo(0,0);
+        }
+        
+        // *แก้ไข: ให้ footer แสดงผลทุกครั้งที่เปลี่ยนหน้า*
+        function showSection(targetId){
+            // ต้องหยุดวิดีโอทั้งหมดก่อนเปลี่ยน Section
+            stopAllVideos(); 
+            
+            document.getElementById('hero-section').style.display='none';
+            document.getElementById('new-brand-section').style.display='none';
+            document.getElementById('promo-banner-section').style.display='none';
+            document.getElementById('extra-promo-banner-section').style.display='none';
+            
+            const allSections=document.querySelectorAll('.section');
+            allSections.forEach(section=>{section.style.display='none';});
+            
+            const targetElement=document.getElementById(targetId);
+            if(targetElement){targetElement.style.display='block';}
+
+            document.getElementById('main-footer').style.display='block'; // *ตรวจสอบให้ footer แสดง*
+            
+            const nav=document.getElementById('main-nav');
+            if(nav.classList.contains('active')){nav.classList.remove('active');}
+            document.querySelectorAll('.dropdown-content').forEach(menu=>{menu.style.display='none';});
+            window.scrollTo(0,0);
+        }
+
+        /* ************************************************* */
+        /* ******** START OF NEW/UPDATED JAVASCRIPT ******** */
+        /* ************************************************* */
+        function stopAllVideos() {
+            // 1. หยุดวิดีโอในส่วน #about (Embedded Iframes)
+            const aboutVideos = document.querySelectorAll('#about .video-box');
+            aboutVideos.forEach(videoBox => {
+                if (videoBox.getAttribute('data-video-played') === 'true') {
+                    const iframe = videoBox.querySelector('iframe');
+                    if (iframe) {
+                        // ดึง src เดิม (ไม่มี autoplay) แล้วใช้รีเซ็ต
+                        const originalSrc = iframe.getAttribute('src').split('?')[0] + '?rel=0';
+                        iframe.setAttribute('src', ''); // หยุดการเล่น
+                        iframe.setAttribute('src', originalSrc); // รีเซ็ต src ไปสถานะเดิม (ไม่เล่น)
+                        iframe.classList.remove('active-video');
+                        iframe.style.display = 'none'; // ซ่อน iframe
+                    }
+                    // การตั้ง data-video-played="false" จะทำให้ CSS แสดง Thumbnail และ Play Overlay เอง
+                    videoBox.setAttribute('data-video-played', 'false');
+                }
+            });
+
+            // 2. หยุดวิดีโอในส่วน #media และ #legendary-reviews (Card structure: YouTube/Facebook)
+            const videoContainers = document.querySelectorAll('.video-card, .facebook-video-card');
+            videoContainers.forEach(container => {
+                const thumbnailContainer = container.querySelector('.video-thumbnail-container');
+                const targetContainer = container.querySelector('[id^="youtube-media-"], [id^="facebook-video-"], [id^="legend-youtube-"]');
+                
+                // ตรวจสอบว่าวิดีโอถูกโหลด/กำลังเล่นหรือไม่ (ดูจาก thumbnail ที่ถูกซ่อน)
+                if (thumbnailContainer && thumbnailContainer.style.display === 'none') {
+                    // ลบ iframe ออกจาก container (เป็นการหยุดการเล่น)
+                    targetContainer.innerHTML = '';
+                    
+                    // แสดง thumbnail และรีเซ็ตสถานะ
+                    thumbnailContainer.style.display = 'block';
+                    thumbnailContainer.removeAttribute('data-loaded');
+                }
+            });
+        }
+        
+        /* *UPDATED: ฟังก์ชันสำหรับเล่นวิดีโอตัวที่ 1 ในส่วน #about */
+        function playEmbeddedVideo(){
+            stopAllVideos(); 
+            const videoBox = document.querySelector('#about .video-box:nth-of-type(1)');
+            if(videoBox.getAttribute('data-video-played') === 'true') return;
+
+            const iframe = document.getElementById('pvdVideo');
+            if(iframe) {
+                // ต้องเพิ่ม ?autoplay=1 เพื่อให้เริ่มเล่นทันที
+                let newSrc = iframe.getAttribute('src');
+                if (!newSrc.includes('autoplay')) {
+                    newSrc += newSrc.includes('?') ? '&autoplay=1' : '?autoplay=1';
+                }
+                iframe.setAttribute('src', newSrc);
+                
+                iframe.classList.add('active-video');
+                iframe.style.display = 'block';
+            }
+            
+            // การซ่อน Thumbnail และ Play Overlay จะถูกจัดการโดย CSS [data-video-played="true"]
+            videoBox.setAttribute('data-video-played', 'true');
+        }
+        
+        /* *UPDATED: ฟังก์ชันสำหรับเล่นวิดีโอตัวที่ 2 ในส่วน #about */
+        function playEmbeddedVideo2(){
+            stopAllVideos(); 
+            const videoBoxes = document.querySelectorAll('#about .video-box');
+            const videoBox = videoBoxes[1];
+            
+            if(!videoBox || videoBox.getAttribute('data-video-played') === 'true') return;
+
+            const iframe = document.getElementById('pvdVideo2');
+            if(iframe) {
+                 // ต้องเพิ่ม ?autoplay=1 เพื่อให้เริ่มเล่นทันที
+                let newSrc = iframe.getAttribute('src');
+                if (!newSrc.includes('autoplay')) {
+                    newSrc += newSrc.includes('?') ? '&autoplay=1' : '?autoplay=1';
+                }
+                iframe.setAttribute('src', newSrc);
+                
+                iframe.classList.add('active-video');
+                iframe.style.display = 'block';
+            }
+            
+            // การซ่อน Thumbnail และ Play Overlay จะถูกจัดการโดย CSS [data-video-played="true"]
+            videoBox.setAttribute('data-video-played', 'true');
+        }
+
+        /* *แก้ไข: ปรับโค้ด loadFacebookVideo (เรียก stopAllVideos)* */
+        function loadFacebookVideo(thumbnailElement,targetId){
+            stopAllVideos(); // [NEW] Stop all other videos
+            if(thumbnailElement.hasAttribute('data-loaded')){return;}
+            const videoSrc=thumbnailElement.getAttribute('data-src');
+            const targetContainer=document.getElementById(targetId);
+            const iframe=document.createElement('iframe');
+            iframe.setAttribute('width','100%');
+            iframe.setAttribute('height','300');
+            iframe.setAttribute('src',videoSrc);
+            iframe.setAttribute('style','border:none;overflow:hidden; display:block; height: 300px;');
+            iframe.setAttribute('scrolling','no');
+            iframe.setAttribute('frameborder','0');
+            iframe.setAttribute('allowfullscreen','true');
+            iframe.setAttribute('allow','autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share');
+            targetContainer.appendChild(iframe);
+            thumbnailElement.style.display='none';
+            thumbnailElement.setAttribute('data-loaded','true');
+        }
+        
+        /* *แก้ไข: ปรับโค้ด loadYouTubeVideo (เรียก stopAllVideos และเพิ่ม autoplay=1)* */
+        function loadYouTubeVideo(thumbnailElement,targetId){
+            stopAllVideos(); // [NEW] Stop all other videos
+            if(thumbnailElement.hasAttribute('data-loaded')){return;}
+            const videoSrc=thumbnailElement.getAttribute('data-src');
+            const targetContainer=document.getElementById(targetId);
+            const iframe=document.createElement('iframe');
+            iframe.setAttribute('width','100%');
+            iframe.setAttribute('height','300');
+            // *แก้ไข: เพิ่ม ?autoplay=1*
+            iframe.setAttribute('src',videoSrc + '?autoplay=1'); 
+            iframe.setAttribute('title','YouTube video player');
+            iframe.setAttribute('frameborder','0');
+            iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen','true');
+            iframe.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+            iframe.setAttribute('style','display:block; height: 300px;');
+            targetContainer.appendChild(iframe);
+            thumbnailElement.style.display='none';
+            thumbnailElement.setAttribute('data-loaded','true');
+        }
+
+        // NEW JAVASCRIPT: checkStatus() function
+        function checkStatus() {
+            const code = document.getElementById('repairCode').value.trim();
+            const result = document.getElementById('result');
+            if (!code) {
+                result.innerHTML = "<p style='color:red;'>กรุณากรอกรหัสใบซ่อม</p>";
+                return;
+            }
+
+            // ตัวอย่างข้อมูลจำลอง
+            const mockData = {
+                "PVD1234": "กำลังซ่อมเครื่องยนต์ - คาดว่าจะเสร็จภายใน 2 วัน",
+                "PVD5678": "ซ่อมเสร็จแล้ว - รอการตรวจสอบขั้นสุดท้าย",
+                "PVD9999": "ยังไม่เริ่มซ่อม - รออะไหล่จากคลัง"
+            };
+
+            // แสดงผลลัพธ์ในโทนสีที่เข้ากับธีม
+            result.innerHTML = mockData[code] ? `<p style='color:#00aaff;'>${mockData[code]}</p>` : "<p style='color:orange;'>ไม่พบข้อมูล กรุณาตรวจสอบรหัสอีกครั้ง</p>";
+        }
+        
+        // --- START JS for Admin Panel Key Manager ---
+        const validKeys = ["PVD12345", "PVD67890", "PVDVIP001"];
+        function checkKey() {
+          const input = document.getElementById("keyInput").value.trim();
+          const message = document.getElementById("keyMessage");
+          if (validKeys.includes(input)) {
+            message.style.color = "green";
+            message.textContent = "✅ รหัสถูกต้อง! สามารถเข้าถึงสถานะซ่อมได้";
+          } else {
+            message.style.color = "red";
+            message.textContent = "❌ รหัสไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง";
+          }
+        }
+        // --- END JS for Admin Panel Key Manager ---
+        
+        document.addEventListener('DOMContentLoaded',()=>{const buttons=document.querySelectorAll('.video-details .read-more-btn');buttons.forEach(button=>{const box=button.closest('.video-details');const textElement=box.querySelector('.description-text');const fullText=textElement.getAttribute('data-full-text');const initialText=textElement.textContent.trim();textElement.setAttribute('data-initial-text',initialText);if(fullText.length<=initialText.length+10){button.style.display='none';const fade=box.querySelector('.read-more-fade');if(fade){fade.style.display='none';}return;}button.addEventListener('click',()=>{const isExpanded=box.classList.contains('description-expanded');if(isExpanded){box.classList.remove('description-expanded');textElement.textContent=textElement.getAttribute('data-initial-text');button.textContent='...เพิ่มเติม';}else{box.classList.add('description-expanded');textElement.textContent=fullText;button.textContent='ซ่อน';}});});});
+        
+        // Data structure for the 9 service categories (Slider)
+        const nineServicesData = [
+            { img: 'ช่วงล่าง.jpg', title: 'ช่วงล่าง (Suspension & Chassis)', desc: 'บริการซ่อมและบำรุงรักษาระบบช่วงล่าง, โช้คอัพ, ถุงลม, และระบบควบคุมการทรงตัว เพื่อความนุ่มนวลและปลอดภัยในการขับขี่.' },
+            { img: 'ตัวถัง.jpg', title: 'ตัวถัง (Body & Paint)', desc: 'งานซ่อมตัวถัง, ทำสีมาตรฐานโรงงาน, เคาะพ่นสี, และแก้ไขปัญหาตัวถังที่เกิดจากอุบัติเหตุหรือรอยขีดข่วนทั่วไป.' },
+            { img: 'พวงมาลัย.jpg', title: 'พวงมาลัย (Steering System)', desc: 'ซ่อมระบบพวงมาลัยไฟฟ้า (EPS), ระบบพวงมาลัยเพาเวอร์, และแก้ไขปัญหาการสั่น/เสียงดังของระบบบังคับเลี้ยว.' },
+            { img: 'ภายใน.jpg', title: 'ภายใน (Interior & Upholstery)', desc: 'งานซ่อมและฟื้นฟูภายในรถยนต์, เบาะหนัง, แผงประตู, ระบบไฟฟ้าภายใน, และหลังคามูนรูฟ/ซันรูฟ.' },
+            { img: 'เกียร์.jpg', title: 'เกียร์ (Transmission System)', desc: 'เชี่ยวชาญซ่อมเกียร์อัตโนมัติ (Automatic Transmission) และเปลี่ยนถ่ายน้ำมันเกียร์ตามสเปคโรงงาน พร้อมรับประกันงานซ่อม.' },
+            { img: 'เครื่องยนต์.jpg', title: 'เครื่องยนต์ (Engine System)', desc: 'งานโอเวอร์ฮอลเครื่องยนต์, แก้ไขปัญหาเครื่องสั่น/ดับ, ตรวจเช็กระบบหัวฉีด, และซ่อมบำรุงตามระยะ เพื่อประสิทธิภาพสูงสุด.' },
+            { img: 'เบรค.jpg', title: 'เบรค (Brake System)', desc: 'ตรวจเช็กและซ่อมบำรุงระบบเบรก, เปลี่ยนผ้าเบรก, จานเบรก, ปั๊มเบรก, และระบบ ABS/ESP เพื่อความปลอดภัยสูงสุด.' },
+            { img: 'ไฟฟ้า.jpg', 'title': 'ระบบไฟฟ้า (Electrical System)', desc: 'แก้ไขปัญหาระบบไฟฟ้าที่ซับซ้อน, กล่องควบคุม (ECU), สายไฟ, และแบตเตอรี่ไฮบริดด้วยเครื่องมือเฉพาะทาง.' },
+            { img: 'แอร์.jpg', 'title': 'ระบบแอร์ (Air Conditioning System)', desc: 'ซ่อมระบบปรับอากาศ, เปลี่ยนคอมเพรสเซอร์, เติมน้ำยาแอร์, และล้างตู้แอร์ เพื่อให้ได้ความเย็นที่สดชื่นและทำงานได้เต็มประสิทธิภาพ.' }
+        ];
+        
+        // --- Modal for Services 2 & 3 (Original Modal) ---
+        var serviceModal=document.getElementById("serviceModal");function openServiceModal(title,imgFileName,content){document.getElementById("modalTitle").innerHTML=title;document.getElementById("modalImage").src=imgFileName;document.getElementById("modalContent").innerHTML=content;serviceModal.style.display="block";}function closeServiceModal(){serviceModal.style.display="none";}
+        function tryAgainPopup(){alert("การนำทาง: แสดงป็อปอัพลองใหม่ (Placeholder)");}
+        
+        // --- Slider Logic for Service 1 (9 หมวดหลัก) ---
+        let currentSlideIndex = 1;
+
+        // Function to dynamically render slides and dots
+        function renderSlider() {
+            const slideshowContainer = document.querySelector('#nineServicesSliderModal .slideshow-container');
+            const indicatorContainer = document.getElementById('slide-indicators');
+            
+            if (!slideshowContainer || !indicatorContainer) return; // Safety check
+
+            slideshowContainer.innerHTML = '';
+            indicatorContainer.innerHTML = '';
+
+            nineServicesData.forEach((item, index) => {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = 'mySlides';
+                slideDiv.innerHTML = `
+                    <img src="${item.img}" alt="${item.title}" style="width:100%">
+                    <div class="slide-content-box">
+                        <h3>${item.title}</h3>
+                        <p>${item.desc}</p>
+                    </div>
+                `;
+                slideshowContainer.appendChild(slideDiv);
+
+                const dotSpan = document.createElement('span');
+                dotSpan.className = 'dot';
+                dotSpan.onclick = function() { currentSlide(index + 1); };
+                indicatorContainer.appendChild(dotSpan);
+            });
+        }
+        
+        // Function to open the slider modal
+        function openNineServicesSlider() {
+            // ป้องกันการเล่นวิดีโอซ้ำซ้อน
+            stopAllVideos(); 
+            
+            const sliderModal = document.getElementById('nineServicesSliderModal');
+            if (!sliderModal) return; // Safety check
+            renderSlider(); // Render fresh slides/dots every time
+            sliderModal.style.display = 'block';
+            currentSlideIndex = 1; // Reset to the first slide
+            showSlides(currentSlideIndex);
+            
+            // Close old modal if somehow open (safety check)
+            closeServiceModal(); 
+        }
+
+        // Function to close the slider modal
+        function closeNineServicesSlider() {
+            document.getElementById('nineServicesSliderModal').style.display = 'none';
+        }
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(currentSlideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(currentSlideIndex = n);
+        }
+
+        // Main function to display the current slide
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName('mySlides');
+            const dots = document.getElementsByClassName('dot');
+            const totalSlides = nineServicesData.length;
+
+            if (slides.length === 0) return; // Handle empty data
+
+            if (n > totalSlides) { currentSlideIndex = 1 }
+            if (n < 1) { currentSlideIndex = totalSlides }
+            
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            
+            // Remove active class from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active-dot', '');
+            }
+            
+            // Display the current slide and highlight the current dot
+            slides[currentSlideIndex - 1].style.display = 'block';
+            dots[currentSlideIndex - 1].className += ' active-dot';
+
+            // Update position text
+            document.getElementById('slide-position-text').innerHTML = 
+                `${currentSlideIndex} / ${totalSlides}`;
+        }
+        
+        // Close modal when user clicks outside the modal
+        window.onclick=function(event){
+            if(event.target==serviceModal){
+                closeServiceModal();
+            }
+            if(event.target==document.getElementById('nineServicesSliderModal')){
+                closeNineServicesSlider();
+            }
+        };
+
+        // Initialize slider on load if it's visible (though it starts hidden)
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSlider();
+            // The rest of the page initialization logic remains...
+        });
+    </script>
+</body>
+</html>
