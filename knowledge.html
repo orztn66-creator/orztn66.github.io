@@ -8,6 +8,10 @@
     
     <style>
         /* --- ตั้งค่าพื้นฐาน --- */
+        * {
+            box-sizing: border-box; /* สำคัญ: จัดการ padding ไม่ให้ดันกล่องเบี้ยว */
+        }
+
         body {
             font-family: 'Sarabun', sans-serif;
             margin: 0;
@@ -25,6 +29,9 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky; /* ตรึงเมนูไว้ด้านบน */
+            top: 0;
+            z-index: 100;
         }
 
         .header-title {
@@ -48,7 +55,7 @@
 
         /* --- คอนเทนเนอร์หลัก --- */
         .container {
-            max-width: 1200px;
+            max-width: 1280px; /* ขยายความกว้างเพื่อให้ 3 คอลัมน์ดูไม่อึดอัด */
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -59,27 +66,35 @@
             color: #222;
         }
 
-        /* --- Grid Layout --- */
+        /* --- Grid Layout (หัวใจหลักของการจัด 3 แถว) --- */
         .menu-grid {
             display: grid;
-            gap: 25px;
+            gap: 30px; /* ระยะห่างระหว่างการ์ด */
             justify-content: center;
         }
 
-        @media (min-width: 769px) {
+        /* Desktop: บังคับ 3 คอลัมน์ */
+        @media (min-width: 992px) {
             .menu-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        @media (max-width: 768px) {
+        /* Tablet: 2 คอลัมน์ */
+        @media (min-width: 600px) and (max-width: 991px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 คอลัมน์ */
+        @media (max-width: 599px) {
             .menu-grid {
                 grid-template-columns: 1fr;
             }
         }
 
         /* --- การ์ดเมนู (Menu Item) --- */
-        /* ใช้ class เดียวกันทั้ง a และ div */
         .menu-item {
             background: white;
             border-radius: 10px;
@@ -87,20 +102,20 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            height: 100%; /* ให้การ์ดสูงเท่ากันในแถว */
+            height: 100%; /* บังคับให้การ์ดสูงเท่ากันทั้งแถว */
         }
 
         .menu-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
 
         .menu-item img {
             width: 100%;
-            height: 220px;
+            height: 220px; /* ความสูงภาพคงที่ */
             object-fit: cover;
             border-bottom: 1px solid #eee;
         }
@@ -110,40 +125,46 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* ดันเนื้อหาให้เต็มพื้นที่ */
-            justify-content: space-between; /* จัดระยะห่างให้สมดุล */
+            flex-grow: 1; /* ขยายพื้นที่ให้เต็ม */
+            justify-content: space-between; /* ดันปุ่มไปล่างสุด */
         }
 
         .menu-item h3 {
             margin: 0 0 10px 0;
             color: #0056b3;
             font-size: 1.2rem;
+            height: 2.4rem; /* จองพื้นที่บรรทัดหัวข้อให้เท่ากัน */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
 
         .menu-item p {
-            margin: 0 0 15px 0;
+            margin: 0 0 20px 0;
             color: #666;
             font-size: 0.95rem;
             line-height: 1.5;
         }
 
-        /* --- ปุ่มแสดงทั้งหมด --- */
+        /* --- ปุ่มแสดงทั้งหมด (สีเดิมตามสั่ง) --- */
         .btn-show-all {
             display: inline-block;
-            background-color: #0056b3; /* สีน้ำเงิน */
-            color: white;
+            background-color: #0056b3; /* สีเดิม */
+            color: white; /* สีตัวอักษรเดิม */
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px; /* มุมมนรี */
+            padding: 10px 25px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 600;
             transition: background 0.3s;
-            margin-top: auto; /* ดันปุ่มไปล่างสุดเสมอ */
-            align-self: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+            margin-top: auto;
+            align-self: center;
+            border: none; /* ไม่มีขอบ */
         }
 
         .btn-show-all:hover {
-            background-color: #004494; /* สีเข้มขึ้นเมื่อชี้ */
+            background-color: #004494; /* เปลี่ยนสีเข้มขึ้นเล็กน้อยเมื่อเมาส์ชี้ */
         }
 
     </style>
@@ -182,21 +203,93 @@
                 </div>
             </div>
 
-            <a href="#" class="menu-item">
+            <div class="menu-item">
                 <img src="service-9-wheel.jpg" alt="ระบบเบรก">
                 <div class="menu-item-content">
-                    <h3>ระบบเบรก</h3>
-                    <p>การดูแลรักษาผ้าเบรกและจานเบรก เพื่อความปลอดภัยสูงสุด</p>
+                    <div>
+                        <h3>ระบบเบรก</h3>
+                        <p>การดูแลรักษาผ้าเบรกและจานเบรก เพื่อความปลอดภัยสูงสุด</p>
+                    </div>
+                    <a href="brake_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
                 </div>
-            </a>
+            </div>
             
-            <a href="#" class="menu-item">
+            <div class="menu-item">
                 <img src="service-4-electric.jpg" alt="แบตเตอรี่">
                 <div class="menu-item-content">
-                    <h3>ระบบไฟ & แบตเตอรี่</h3>
-                    <p>วิธีสังเกตอาการแบตเตอรี่เสื่อมและการดูแลระบบไฟ</p>
+                    <div>
+                        <h3>ระบบไฟ & แบตเตอรี่</h3>
+                        <p>วิธีสังเกตอาการแบตเตอรี่เสื่อมและการดูแลระบบไฟ</p>
+                    </div>
+                    <a href="battery_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
                 </div>
-            </a>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-2-engine.jpg" alt="เครื่องยนต์">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>เครื่องยนต์ (Engine)</h3>
+                        <p>การดูแลรักษาเครื่องยนต์ การเช็คระยะ และการวิเคราะห์เสียงผิดปกติ</p>
+                    </div>
+                    <a href="engine_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-3-transmission.jpg" alt="ระบบเกียร์">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>ระบบเกียร์ (Transmission)</h3>
+                        <p>การเปลี่ยนน้ำมันเกียร์ และวิธีสังเกตอาการเกียร์กระตุกหรือเข้ายาก</p>
+                    </div>
+                    <a href="transmission_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-5-ac.jpg" alt="ระบบแอร์">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>ระบบแอร์ (Air Con)</h3>
+                        <p>การล้างแอร์ เติมน้ำยาแอร์ และการแก้ปัญหาแอร์ไม่เย็น มีกลิ่นอับ</p>
+                    </div>
+                    <a href="ac_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-6-interior.jpg" alt="ภายในห้องโดยสาร">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>ภายใน (Interior)</h3>
+                        <p>การดูแลรักษาเบาะหนัง คอนโซล และอุปกรณ์อำนวยความสะดวกภายใน</p>
+                    </div>
+                    <a href="interior_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-7-body.jpg" alt="ตัวถัง">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>ตัวถังและสี (Body & Paint)</h3>
+                        <p>บริการซ่อมสีและตัวถัง เก็บรายละเอียดรอยขีดข่วนให้เหมือนใหม่</p>
+                    </div>
+                    <a href="body_paint_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="service-8-options.jpg" alt="พวงมาลัย">
+                <div class="menu-item-content">
+                    <div>
+                        <h3>ระบบพวงมาลัย (Steering)</h3>
+                        <p>แก้ไขอาการพวงมาลัยหนัก เสียงดังเวลาเลี้ยว หรือพวงมาลัยสั่น</p>
+                    </div>
+                    <a href="steering_detail.html" class="btn-show-all">แสดงทั้งหมด ➜</a>
+                </div>
+            </div>
 
         </div>
     </div>
