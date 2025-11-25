@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>คู่มือการดูแลรักษาระบบเกียร์ - PVD Auto Garage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* --- Variables & Reset --- */
+    :root {
+      --primary-color: #1a3c6e; /* สีกรมท่า ดูน่าเชื่อถือ */
+      --secondary-color: #3a7bd5; /* สีฟ้าสว่าง */
+      --accent-color: #e74c3c; /* สีแดงสำหรับจุดเตือน */
+      --success-color: #00b09b; /* สีเขียว */
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+      --text-light: #666;
+      --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: 'Sarabun', sans-serif; 
+      background-color: var(--bg-color); 
+      color: var(--text-color); 
+      line-height: 1.8; 
+      font-size: 16px;
+    }
+
+    /* --- Navigation --- */
+    .nav-bar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .brand-logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .back-btn {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--primary-color);
+      padding: 6px 16px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      height: 350px;
+      background-color: #333;
+      overflow: hidden;
+    }
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6; /* ปรับความสว่างภาพพื้นหลัง */
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+      max-width: 800px;
+    }
+    .hero-title {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
+    }
+    .hero-subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* --- Container & Content --- */
+    .main-container {
+      max-width: 800px;
+      margin: -60px auto 0; /* ดึงกล่องขึ้นมาทับ Hero เล็กน้อย */
+      position: relative;
+      z-index: 10;
+      padding: 0 20px 60px;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: var(--card-shadow);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    h2::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 28px;
+      background: var(--secondary-color);
+      margin-right: 15px;
+      border-radius: 3px;
+    }
+    
+    h3 {
+      color: var(--text-color);
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* --- Feature List --- */
+    .custom-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+    .custom-list li {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      color: #444;
+      font-weight: 500;
+    }
+    .custom-list li::before {
+      content: '✔'; /* หรือเปลี่ยนเป็น icon */
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+      background: rgba(58, 123, 213, 0.1);
+      color: var(--secondary-color);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    /* --- Warning List --- */
+    .warning-list li::before {
+      content: '!';
+      background: rgba(231, 76, 60, 0.1);
+      color: var(--accent-color);
+    }
+
+    /* --- Info Box --- */
+    .info-box {
+      background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+      border-left: 5px solid #ffc107;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+      color: #856404;
+    }
+    .info-box strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    /* --- Section Dividers --- */
+    .section-divider {
+      height: 1px;
+      background: #eee;
+      margin: 40px 0;
+      border: none;
+    }
+
+    /* --- Footer CTA --- */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(26, 60, 110, 0.3);
+    }
+    .cta-section h3 { color: white; margin-top: 0; }
+    .cta-section p { color: rgba(255,255,255,0.85); text-align: center; }
+    
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      background-color: #2ecc71; /* สีเขียวปุ่มโทร */
+      color: white;
+      text-decoration: none;
+      padding: 12px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    }
+    .btn-call:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6);
+      background-color: #27ae60;
+    }
+    .btn-call span { margin-right: 10px; font-size: 1.3rem; }
+
+    /* --- Mobile Responsive --- */
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.8rem; }
+      .hero-section { height: 250px; }
+      .main-container { margin-top: -30px; padding: 0 15px 40px; }
+      .content-card { padding: 25px; }
+      .cta-section { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="brand-logo">PVD Auto Garage</div>
+    <a href="knowledge.html" class="back-btn">← กลับหน้าหลัก</a>
+  </nav>
+
+  <header class="hero-section">
+    <img src="service-3-transmission.jpg" alt="Service Transmission" class="hero-bg" onerror="this.src='https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80'"> <div class="hero-content">
+      <h1 class="hero-title">ดูแลเกียร์...ก่อนพัง</h1>
+      <p class="hero-subtitle">คู่มือฉบับสมบูรณ์เพื่อยืดอายุการใช้งานระบบเกียร์รถยนต์ของคุณ</p>
+    </div>
+  </header>
+
+  <div class="main-container">
+    
+    <article class="content-card">
+      <h2>1. เกียร์อัตโนมัติ (Automatic Transmission)</h2>
+      <p><strong>น้ำมันเกียร์อัตโนมัติ (ATF)</strong> เปรียบเสมือน "เลือด" ที่หล่อเลี้ยงระบบเกียร์ ทำหน้าที่ทั้งหล่อลื่น ส่งถ่ายกำลัง และระบายความร้อน การละเลยการเปลี่ยนถ่ายน้ำมันเกียร์คือสาเหตุอันดับ 1 ที่ทำให้เกียร์พังก่อนวัยอันควร</p>
+      <p>ควรเปลี่ยนทุกๆ <strong>20,000 - 40,000 กม.</strong> (ขึ้นอยู่กับการใช้งานและรุ่นรถ)</p>
+
+      <h3>🚨 สัญญาณเตือนที่ต้องระวัง</h3>
+      <ul class="custom-list warning-list">
+        <li>เกียร์กระตุก กระชาก หรือรอรอบนานผิดปกติขณะเปลี่ยนเกียร์</li>
+        <li>มีเสียงหอน หรือเสียงโลหะเสียดสีดังจากห้องเกียร์</li>
+        <li>น้ำมันเกียร์สีคล้ำดำ มีกลิ่นไหม้ หรือมีเศษโลหะปน</li>
+      </ul>
+    </article>
+
+    <article class="content-card">
+      <h2>2. เกียร์ธรรมดา & เกียร์ CVT</h2>
+      
+      <h3>เกียร์ธรรมดา (Manual) 🛠️</h3>
+      <p>หัวใจสำคัญคือ <strong>น้ำมันเกียร์</strong> และ <strong>ชุดคลัตช์</strong> น้ำมันเกียร์ธรรมดาจะมีความหนืดสูงกว่า ควรเปลี่ยนทุก 40,000 - 80,000 กม. ส่วนชุดคลัตช์หากพบอาการลื่น เร่งเครื่องแต่รถไม่ไป หรือมีกลิ่นไหม้ ต้องรีบตรวจสอบทันที</p>
+
+      <hr class="section-divider">
+
+      <h3>เกียร์ CVT (Continuously Variable) 💙</h3>
+      <p>ระบบเกียร์ที่ใช้สายพาน/โซ่ มีความละเอียดอ่อนสูงมาก <strong>ห้ามใช้น้ำมันเกียร์ผิดประเภทเด็ดขาด</strong> ต้องใช้ <strong>CVT Fluid</strong> เท่านั้น และควรเปลี่ยนถ่ายตามระยะอย่างเคร่งครัด หากสายพานลื่นจะเกิดความเสียหายรุนแรงต่อพูลเลย์</p>
+    </article>
+
+    <article class="content-card">
+      <h2>3. เคล็ดลับยืดอายุเกียร์ให้ยาวนาน</h2>
+      <ul class="custom-list">
+        <li><strong>วอร์มเครื่อง:</strong> เมื่อสตาร์ทรถตอนเช้า ให้เวลาเครื่องยนต์และน้ำมันเกียร์หมุนเวียนสักครู่ก่อนออกตัว</li>
+        <li><strong>จอดสนิทค่อยเปลี่ยน:</strong> สำหรับเกียร์ออโต้ อย่าเปลี่ยนเกียร์ D ไป R หรือ P ขณะที่รถยังไหลอยู่</li>
+        <li><strong>ใช้เกียร์ต่ำช่วย:</strong> เมื่อลงทางลาดชัน ให้ใช้เกียร์ต่ำ (L, S, หรือ Mode Manual) เพื่อใช้ Engine Brake ลดภาระเกียร์และเบรก</li>
+      </ul>
+
+      <div class="info-box">
+        <strong>📅 หัวใจสำคัญคือ "การบำรุงรักษาตามระยะ"</strong>
+        <p style="margin-bottom:0; color:#664d03;">การเปลี่ยนถ่ายน้ำมันเกียร์อาจดูเหมือนค่าใช้จ่ายสิ้นเปลือง แต่เทียบไม่ได้เลยกับค่าซ่อมเกียร์ใหม่ทั้งลูก (Overhaul) การดูแลสม่ำเสมอคือการประหยัดเงินในระยะยาวครับ</p>
+      </div>
+    </article>
+
+    <div class="cta-section">
+      <h3>พบอาการผิดปกติ หรือถึงรอบถ่ายน้ำมันเกียร์?</h3>
+      <p>ให้ทีมช่างมืออาชีพจาก PVD Auto Garage ดูแลรถของคุณ ด้วยเครื่องมือมาตรฐานและอะไหล่คุณภาพ</p>
+      <a href="tel:0885565591" class="btn-call">
+        <span>📞</span> โทรนัดหมายบริการ (088-556-5591)
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
