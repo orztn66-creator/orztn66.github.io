@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>Tarot & Suriyayart Ultimate (Fixed & Pro)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* การจัดวางในเมนู 8 (จับยามสามตา) เพื่อให้ข้างขึ้นและยามแยกบรรทัด */
+        #yamsamtah .info-grid {
+            /* ต้องมี CSS ใน style.css เพื่อควบคุม .info-grid ทั่วไป */
+            /* แต่สำหรับเมนู 8 จะบังคับให้เป็น 1 คอลัมน์ */
+            grid-template-columns: 1fr; 
+            margin-bottom: 5px;
+            display: grid; /* ตรวจสอบให้แน่ใจว่ามีการใช้ grid */
+            gap: 10px; /* เพิ่มช่องว่างเล็กน้อย */
+        }
+        
+        /* สไตล์สำหรับกล่องทำนายในเมนู 8 */
+        #yamsamtah .prediction-box #yamResultOutput {
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            text-align: center;
+            color: #ef4444; 
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        
+        /* สไตล์อื่นๆ ที่ใช้ในเมนู 8 */
+        #yamsamtah .pro-row {
+            display: flex; 
+            gap: 10px;
+        }
+
+        #yamsamtah textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<header>
+  <div class="brand">☸ โหราศาสตร์สุริยยาตร์</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰ เมนู</button>
+</header>
+
+<nav class="sidebar" id="sidebar">
+  <div style="text-align:right; padding:15px; cursor:pointer; color:#94a3b8;" onclick="toggleMenu()">✖ ปิด</div>
+  <a href="#" onclick="showSection('home')" id="link-home" class="active">🏠 หน้าแรก (ฤกษ์ปัจจุบัน)</a>
+  <a href="#" onclick="showSection('yesno')" id="link-yesno">1️⃣ ถาม ใช่/ไม่ใช่</a>
+  <a href="#" onclick="showSection('daily')" id="link-daily">2️⃣ ดวงประจำวัน</a>
+  <a href="#" onclick="showSection('general')" id="link-general">3️⃣ เสี่ยงทาย 12 ภพ</a>
+  <a href="#" onclick="showSection('binder')" id="link-binder" style="color:#fbbf24;">4️⃣ ผูกดวงสุริยยาตร์ (หลัก)</a>
+  <a href="#" onclick="showSection('inthaphat')" id="link-inthaphat" style="color:#d97706;">5️⃣ อินทภาส-บาทจันทร์</a>
+  <a href="#" onclick="showSection('inthaphat_pro')" id="link-inthaphat_pro" style="color:#38bdf8;">6️⃣ อินทภาสฯ + มหานที (Pro)</a>
+  <a href="#" onclick="showSection('phichaisongkram')" id="link-phichaisongkram" style="color:#ef4444;">7️⃣ ดวงพิชัยสงคราม</a>
+  
+  <a href="#" onclick="showSection('yamsamtah')" id="link-yamsamtah" style="color:#10b981;">8️⃣ จับยามสามตา ✨</a>
+  </nav>
+
+<div class="container">
+
+  <div id="home" class="app-section active">
+    <div style="text-align:center; margin-bottom:20px;">
+        <h1 style="color:#fbbf24; font-size:2rem;">ยินดีต้อนรับ</h1>
+        <p style="color:#94a3b8;">ระบบโหราศาสตร์ คำนวณสดตามเวลาจริง</p>
+    </div>
+
+    <div class="home-card">
+       <h2>🕰️ สรุปฤกษ์ประจำวัน (เวลาจริง)</h2>
+       <div class="time-display" id="realTime">00:00:00</div>
+       <div class="date-display" id="realDate">...</div>
+       
+       <div class="info-grid">
+         <div class="info-item">
+           <span class="info-label">🌚 ข้างขึ้น / ข้างแรม (คำนวณจริง)</span>
+           <span class="info-value" id="lunarPhase">...</span>
+         </div>
+         <div class="info-item">
+           <span class="info-label">⏰ ยามอัฏฐกาล (เวลานี้)</span>
+           <span class="info-value" id="thaiYam">...</span>
+         </div>
+         <div class="info-item">
+           <span class="info-label">🌕 จันทร์เสวยฤกษ์ (ขณะนี้)</span>
+           <span class="info-value status-good" id="moonRerk">...</span>
+         </div>
+         <div class="info-item">
+           <span class="info-label">⬆️ ฤกษ์บน / ⬇️ ฤกษ์ล่าง</span>
+           <span class="info-value">บน: <span id="rerkBun">...</span> / ล่าง: <span id="rerkLa">...</span></span>
+         </div>
+       </div>
+    </div>
+  </div>
+
+  <div id="yesno" class="app-section">
+    <h2 style="text-align:center; color:#ec4899;">ถาม-ตอบ ใช่/ไม่ใช่</h2>
+    <button class="big-btn" style="background:#ec4899" onclick="drawYesNo()">🎴 หยิบไพ่</button>
+    <div id="res-yesno" class="result-box"><span style="color:#999">รอคำทำนาย...</span></div>
+  </div>
+
+  <div id="daily" class="app-section">
+    <h2 style="text-align:center; color:#3b82f6;">ดวงประจำวัน</h2>
+    <div style="text-align:center; background:#f1f5f9; color:#333; padding:10px; border-radius:8px; margin-bottom:10px;">
+       <span id="dailyDate">...</span>
+    </div>
+    <button class="big-btn" style="background:#3b82f6" onclick="drawDaily()">🔮 เปิดไพ่ประจำวัน</button>
+    <div id="res-daily" class="result-box"><span style="color:#999">รอคำทำนาย...</span></div>
+  </div>
+
+  <div id="general" class="app-section">
+    <h2 style="text-align:center; color:#8b5cf6;">12 ภพเรือน</h2>
+    <div id="general-grid" class="house-grid"></div>
+  </div>
+
+  <div id="binder" class="app-section">
+    <h2 style="text-align:center; color:#fbbf24;">⭐ ผูกดวงสุริยยาตร์</h2>
+    <div class="profile-manager">
+      <div style="margin-bottom:15px;">
+        <label style="color:#fbbf24;">📂 เลือกประวัติ:</label>
+        <select id="profileList" onchange="loadProfile()" style="margin-top:5px; width:100%;"><option value="">-- เลือกชื่อ --</option></select>
+      </div>
+      <div class="input-group">
+        <input type="text" id="pName" placeholder="ชื่อเจ้าชะตา">
+        <input type="number" id="pDay" placeholder="วัน">
+        <select id="pMonth"><option value="1">ม.ค.</option><option value="2">ก.พ.</option><option value="3">มี.ค.</option><option value="4">เม.ย.</option><option value="5">พ.ค.</option><option value="6">มิ.ย.</option><option value="7">ก.ค.</option><option value="8">ส.ค.</option><option value="9">ก.ย.</option><option value="10">ต.ค.</option><option value="11">พ.ย.</option><option value="12">ธ.ค.</option></select>
+        <input type="number" id="pYear" placeholder="พ.ศ.">
+        <input type="number" id="pHour" placeholder="ชม." value="06">
+        <input type="number" id="pMin" placeholder="นาที" value="00">
+        <button onclick="updateCurrentTime('pHour', 'pMin')" style="background:#4f46e5; color:white; border:none; padding:10px 10px; border-radius:8px; cursor:pointer; margin-top:0;">เวลาปัจจุบัน</button>
+      </div>
+      <div class="action-row">
+        <button class="save-btn" style="background:#10b981; color:white; border:none; padding:10px; border-radius:6px; cursor:pointer;" onclick="saveProfile()">💾 บันทึก</button>
+        <button style="background:#ef4444; color:white; border:none; padding:10px; border-radius:6px; cursor:pointer;" onclick="deleteProfile()">🗑️ ลบ</button>
+      </div>
+    </div>
+    <button class="big-btn" onclick="runSuriyayart()">🚀 ผูกดวง & อ่านคำทำนาย</button>
+    <div id="binderResult" style="display:none; margin-top:20px;">
+      <h3 style="text-align:center; color:#cbd5e1; font-size:16px;">ดวงราศีจักร (สุริยยาตร์)</h3>
+      <div id="zodiacChart" class="zodiac-chart"></div> <div class="prediction-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:10px;">
+            <b style="color:#b45309; font-size:18px;">📖 พื้นดวงชะตา</b>
+            <button onclick="toggleSpeech()" style="background:#4f46e5; color:white; border:none; padding:5px 10px; border-radius:15px; cursor:pointer;">🔊 ฟัง</button>
+        </div>
+        <div id="astroText" style="font-size:15px; line-height:1.6; margin-top:10px;"></div>
+      </div>
+      <h3 style="text-align:center; color:#8b5cf6; margin-top:30px;">🃏 เสี่ยงทายไพ่ประจำภพ</h3>
+      <div id="binder-grid" class="house-grid"></div>
+    </div>
+  </div>
+
+  <div id="inthaphat" class="app-section">
+    <h2 style="text-align:center; color:#d97706;">📜 อินทภาส-บาทจันทร์</h2>
+    <div class="profile-manager" style="border-color:#d97706; text-align:center;">
+        <p style="color:#cbd5e1;">(ระบบจะดึงข้อมูลวันเกิดจากเมนู 4)</p>
+        
+        <label class="pro-label" style="color:#fcd34d; margin-top:10px;">กำหนดเวลาที่ต้องการคำนวณอินทภาส</label>
+        <div class="pro-row" style="max-width:300px; margin:5px auto; gap:5px;">
+          <input id="inthaphatHour" type="number" placeholder="ชม." min="0" max="23" value="00" style="text-align:center;">
+          <input id="inthaphatMinute" type="number" placeholder="นาที" min="0" max="59" value="00" style="text-align:center;">
+          <button onclick="updateCurrentTime('inthaphatHour', 'inthaphatMinute')" style="background:#4f46e5; width:auto; padding:10px 15px; margin:0; border-radius:8px;">เวลาปัจจุบัน</button>
+        </div>
+
+        <button class="big-btn" style="background:#d97706;" onclick="runInthaphat()">🔮 คำนวณดาวเสวยอายุ</button>
+    </div>
+    <div id="inthaphatResult" style="display:none; margin-top:20px;">
+        <div class="prediction-box" style="border-left-color:#fbbf24;">
+            <div id="inthaphatText" style="margin-bottom:15px;"></div>
+            <table class="inthaphat-table">
+                <thead><tr><th>ดาวเสวย</th><th>อายุ (ปี)</th><th>ช่วงอายุ</th></tr></thead>
+                <tbody id="inthaphatTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+
+  <div id="inthaphat_pro" class="app-section">
+    <div class="pro-wrap">
+        <div class="pro-card">
+          <h1 style="color:#38bdf8;">อินทภาส & มหานที ๕ ชั้น (Pro)</h1>
+          <div class="pro-tabs" id="modeTabs">
+            <div class="pro-tab active" data-mode="birth">กำเนิด</div>
+            <div class="pro-tab" data-mode="transit">จร (ทำนายล่วงหน้า)</div>
+          </div>
+          <div class="pro-grid">
+            <div>
+              <label class="pro-label">วัน เดือน พ.ศ.เกิด (ดวงพื้น)</label>
+              <div class="pro-row">
+                <input id="pro-day" type="number" placeholder="วัน" min="1" max="31">
+                <input id="pro-month" type="number" placeholder="เดือน" min="1" max="12">
+                <input id="pro-year" type="number" placeholder="พ.ศ.">
+              </div>
+              <label class="pro-label">เวลาเกิด</label>
+              <div class="pro-row">
+                <input id="pro-hour" type="number" placeholder="ชม." min="0" max="23">
+                <input id="pro-minute" type="number" placeholder="นาที" min="0" max="59">
+              </div>
+              <label class="pro-label">สถานที่</label>
+              <input id="pro-place" list="places" placeholder="เช่น กรุงเทพ">
+              <datalist id="places"></datalist>
+              <input id="uploadCsv" type="file" accept=".csv" style="margin-top:5px;">
+              
+              <div id="baseTimeControls" style="display:none; margin-top:10px;">
+                <label class="pro-label" style="color:#fcd34d;">กำหนดเวลาหลัก (Anchor Time) - ใช้เป็นเวลาจรเริ่มต้น</label>
+                <div class="pro-row">
+                  <input id="baseDay" type="number" placeholder="วัน">
+                  <input id="baseMonth" type="number" placeholder="เดือน">
+                  <input id="baseYear" type="number" placeholder="พ.ศ.">
+                </div>
+                <div class="pro-row">
+                  <input id="baseHour" type="number" placeholder="ชม." min="0" max="23">
+                  <input id="baseMinute" type="number" placeholder="นาที" min="0" max="59">
+                </div>
+              </div>
+
+              <div id="offsetControls" style="display:none; margin-top:10px;">
+                <label class="pro-label" style="color:#34d399;">เพิ่มเวลาจร (Offset) จากเวลาหลัก</label>
+                <div class="pro-row">
+                  <input id="offsetDays" type="number" placeholder="วัน" value="0">
+                  <input id="offsetHours" type="number" placeholder="ชม." value="0">
+                  <input id="offsetMinutes" type="number" placeholder="นาที" value="0">
+                </div>
+              </div>
+              
+              <div class="pro-controls">
+                <button onclick="computeInthap()">คำนวณ: อินทภาส</button>
+                <button onclick="computeMahan()">คำนวณ: มหานที ๕ ชั้น</button>
+                <button onclick="downloadSampleCSV()" style="background:#4b5563;">ตัวอย่าง CSV</button>
+              </div>
+            </div>            <div>
+              <label class="pro-label">ผลอินทภาส</label>
+              <button onclick="copyResult('outInthap')" style="background:#576b91; margin-top:0px; padding:6px; font-size:13px;">📋 คัดลอกผลลัพธ์</button> 
+              <div id="outInthap" class="pro-result">รอผลคำนวณ...</div>
+              
+              <label class="pro-label" style="margin-top:20px;">ผลมหานที ๕ ชั้น</label>
+              <button onclick="copyResult('outMahan')" style="background:#576b91; margin-top:0px; padding:6px; font-size:13px;">📋 คัดลอกผลลัพธ์</button> 
+              <div id="outMahan" class="pro-result">รอผลคำนวณ...</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div id="phichaisongkram" class="app-section">
+    <h2 style="text-align:center; color:#ef4444;">7️⃣ ดวงพิชัยสงคราม</h2>
+    <p>เนื้อหาสำหรับดวงพิชัยสงคราม...</p>
+  </div>
+
+
+  <div id="yamsamtah" class="app-section">
+      <h2 style="color:#10b981;">8️⃣ จับยามสามตา</h2>
+      <p style="color:#fbbf24; font-weight:bold;">ใช้ระบบทำนาย "ใส-ปอด-กรรม" ตามหลักที่กำหนด</p>
+      
+      <div class="profile-manager">
+          <h3 style="margin-bottom:15px; color:#1f2937;">ข้อมูลการจับยาม (ดึงจากหน้าแรก)</h3>
+          
+          <div class="info-grid"> 
+              <div class="info-item" style="border-left-color: #3b82f6;">
+                  <span class="info-label">🌚 ข้างขึ้น / ข้างแรม</span>
+                  <span class="info-value" id="yamLunarPhase">...</span>
+              </div>
+          </div>
+          
+          <div class="info-grid"> 
+              <div class="info-item" style="border-left-color: #3b82f6;">
+                  <span class="info-label">⏰ ยามที่จับ (ยามอัฏฐกาล)</span>
+                  <span class="info-value" id="yamAttakarn">...</span>
+              </div>
+          </div>
+
+          <div style="margin-top:20px;">
+              <label class="pro-label">คำถามที่ต้องการทำนาย (คำถามเดียว)</label>
+              <textarea id="yamQuestion" rows="2" placeholder="กรุณาพิมพ์คำถามของคุณ"></textarea>
+          </div>
+
+          <div class="pro-row" style="margin-top:20px;">
+              <button class="big-btn" style="background:#059669; flex:1;" onclick="predictYam(1)">🔮 คำทำนายหลัก</button>
+              <button class="big-btn" style="background:#d97706; flex:1;" onclick="predictYam(2)">🔮 คำทำนายจร</button>
+          </div>
+
+          <div class="prediction-box" id="yamResultBox" style="margin-top:20px; display:none; border-left-color:#ef4444;">
+              <h3 style="color:#1e293b; margin-bottom:10px;">✨ ผลคำทำนาย (ใส - ปอด - กรรม)</h3>
+              <div id="yamResultOutput">...</div>
+              <p id="yamResultExplanation" style="font-size:0.95rem; margin-top:10px; color:#475569; line-height:1.5;">
+                  ...
+              </p>
+          </div>
+
+          <p style="font-size:12px; color:#94a3b8; margin-top:20px;">
+              <b style="color:#059669;">คำทำนายหลัก:</b> ใช้ตำแหน่งยามที่จับได้ในครั้งแรก (ยามกำเนิด)<br>
+              <b style="color:#d97706;">คำทำนายจร:</b> นับยามชุดใหม่ทั้งหมด (ยามปัจจุบัน ณ เวลาที่กด)
+          </p>
+      </div>
+  </div>
+  </div>
+
+<script src="script.js"></script>
+
+<script>
+    // ** Global State และฟังก์ชันพื้นฐานที่จำเป็น **
+    window.currentLunarPhase = "";    
+    window.currentYamIndex = -1;      
+    window.initialYamIndex = -1;      
+    window.initialLunarPhase = "";    
+    
+    function toggleMenu() { 
+        document.getElementById('sidebar').classList.toggle('active'); 
+        document.getElementById('overlay').classList.toggle('active'); 
+    }
+
+    function showSection(id) { 
+        document.querySelectorAll('.app-section, div[id$="app-section"]').forEach(e => e.classList.remove('active')); 
+        document.getElementById(id).classList.add('active'); 
+        
+        document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+        const activeLink = document.querySelector(`#link-${id}`);
+        if (activeLink) activeLink.classList.add('active');
+        
+        if (id === 'yamsamtah') {
+            // ฟังก์ชันนี้ต้องถูกเรียกเพื่ออัปเดตค่าข้างขึ้น/แรมและยาม
+            if (typeof updateHomeClock === 'function') {
+                updateHomeClock(); 
+            }
+            
+            document.getElementById('yamLunarPhase').textContent = window.currentLunarPhase || "กำลังคำนวณ...";
+            const thaiYamTextEl = document.getElementById('thaiYam');
+            const thaiYamText = thaiYamTextEl ? thaiYamTextEl.textContent : "กำลังคำนวณ...";
+            document.getElementById('yamAttakarn').textContent = thaiYamText;
+            
+            if (window.initialYamIndex === -1 && window.currentYamIndex !== -1) { 
+                window.initialYamIndex = window.currentYamIndex; 
+                window.initialLunarPhase = window.currentLunarPhase;
+            }
+            
+            const resultBox = document.getElementById('yamResultBox');
+            if(resultBox) resultBox.style.display = 'none'; 
+            const questionArea = document.getElementById('yamQuestion');
+            if(questionArea) questionArea.value = '';
+        }
+        
+        // ปิด Sidebar หากเปิดอยู่
+        if (document.getElementById('sidebar').classList.contains('active')) {
+            toggleMenu(); 
+        }
+    }
+    
+    // ** โค้ดที่ต้องมีใน script.js เพื่อทำให้ Home และ Menu 8 ทำงาน **
+    // (หากคุณมี SuriyayartEngine ที่สมบูรณ์แล้ว อาจไม่จำเป็นต้องใช้โค้ดชุดนี้ซ้ำ)
+    
+    // [START] จำลองฟังก์ชันที่ต้องมี (หากไม่มีใน script.js)
+    function getAttakarnYam(now) {
+        // ... (โค้ดคำนวณยามอัฏฐกาลเดิม)
+        const dayOfWeek = now.getDay(); 
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const totalMinutes = hour * 60 + minute;
+        const planetNames = ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "ราหู"];
+        const thaksaPositions = ["บริวาร", "อายุ", "เดช", "ศรี", "มูละ", "อุตสาหะ", "มนตรี", "กาลกิณี"];
+        let baseDayIndex = dayOfWeek;
+        if (hour >= 0 && hour < 6) { baseDayIndex = (dayOfWeek === 0) ? 6 : dayOfWeek - 1; }
+        const startPlanetIndex = baseDayIndex; 
+        let thaksaSequence = [];
+        for(let i=0; i<8; i++){
+            const planetIdx = (startPlanetIndex + i) % 8;
+            thaksaSequence.push(planetNames[planetIdx]);
+        }
+        const YAM_PERIOD_MINUTES = 90;
+        let isDay = hour >= 6 && hour < 18;
+        let yamIndex = -1;
+        let currentThaksaPositions = [...thaksaPositions];
+
+        if (isDay) {
+            const minutesSinceDayStart = totalMinutes - (6 * 60); 
+            yamIndex = Math.floor(minutesSinceDayStart / YAM_PERIOD_MINUTES);
+        } else {
+            const isTodayNight = hour >= 18; 
+            let minutesSinceNightStart;
+            if (isTodayNight) minutesSinceNightStart = totalMinutes - (18 * 60); 
+            else minutesSinceNightStart = (6 * 60) + totalMinutes; 
+            yamIndex = Math.floor(minutesSinceNightStart / YAM_PERIOD_MINUTES);
+            thaksaSequence.reverse(); 
+            currentThaksaPositions.reverse(); 
+        }
+
+        window.currentYamIndex = yamIndex; 
+
+        if (yamIndex >= 0 && yamIndex < 8) {
+            const yamName = thaksaSequence[yamIndex];
+            const thaksaName = currentThaksaPositions[yamIndex];
+            return `ยาม ${yamIndex + 1} (${yamName} - ${thaksaName})`;
+        }
+        
+        window.currentYamIndex = -1;
+        return "นอกช่วงยาม";
+    }
+
+    function updateHomeClock() {
+        const now = new Date();
+        // ... (โค้ดคำนวณเวลาและวันที่)
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+        // (อัปเดต realTime, realDate, moonRerk, rerkBun, rerkLa)
+        
+        // จำลอง/คำนวณข้างขึ้น/ข้างแรม (ต้องใช้ SuriyayartEngine จริง)
+        const day = now.getDate();
+        const lunarDay = (day % 15) + 1;
+        const isWaxing = (day % 2 === 0); // จำลอง
+        window.currentLunarPhase = isWaxing ? 'ข้างขึ้น' : 'ข้างแรม';
+        
+        const lunarPhaseEl = document.getElementById('lunarPhase');
+        if(lunarPhaseEl) lunarPhaseEl.textContent = `${window.currentLunarPhase} ${lunarDay} ค่ำ`;
+
+        // อัปเดตยาม
+        const thaiYamEl = document.getElementById('thaiYam');
+        if(thaiYamEl) thaiYamEl.textContent = getAttakarnYam(now);
+    }
+    // [END] จำลองฟังก์ชันที่ต้องมี
+    
+    // 6. ฟังก์ชันทำนายใส-ปอด-กรรม
+    function getPredictionResult(lunarPhase, yamIndex) {
+        if (yamIndex < 0 || yamIndex > 7) return { symbol: 'กรรม', meaning: 'ไม่ชัดเจน', rawMeaning: 'หญิงเด่น' };
+        
+        // ค้างขึ้น นับหนึ่งที่ ปอด วนไปหา กรรม ใส (ปอด:0, ใส:1, กรรม:2)
+        // ค้างแรมนับจาก กรรม ไปหา ปอด ไปหา ใส (กรรม:0, ปอด:1, ใส:2)
+        const YAM_SEQUENCE = {
+            'ข้างขึ้น': ['ปอด', 'ใส', 'กรรม'], 
+            'ข้างแรม': ['กรรม', 'ปอด', 'ใส']  
+        };
+        
+        const sequence = YAM_SEQUENCE[lunarPhase] || YAM_SEQUENCE['ข้างแรม'];
+        const positionIndex = yamIndex % sequence.length;
+        const finalSymbol = sequence[positionIndex];
+
+        let interpretation = "";
+        if (finalSymbol === 'ใส') {
+            interpretation = `**${finalSymbol.toUpperCase()}** (ความหมาย: direct answer / yes / come / male) - คำถามนี้มีแนวโน้ม **สำเร็จ** หรือเป็นไปตามที่หวังอย่างชัดเจน`;
+        } else if (finalSymbol === 'ปอด') {
+            interpretation = `**${finalSymbol.toUpperCase()}** (ความหมาย: blocked / not yet / a little slow / leaning towards female) - คำถามนี้จะ **ล่าช้า** มีอุปสรรค หรือยังไม่ถึงเวลาอันควร`;
+        } else { // กรรม
+            interpretation = `**${finalSymbol.toUpperCase()}** (ความหมาย: flipped / no / not coming / female dominant) - คำถามนี้มีแนวโน้ม **ไม่สำเร็จ** หรือผลลัพธ์จะ **พลิกผันตรงกันข้าม**`;
+        }
+
+        return {
+            symbol: finalSymbol,
+            meaning: interpretation
+        };
+    }
+
+    function predictYam(mode) {
+        const question = document.getElementById('yamQuestion').value.trim();
+        if (!question) {
+            alert("กรุณาใส่คำถามก่อนทำนายค่ะ");
+            return;
+        }
+        
+        let currentPhase;
+        let currentYamIdx;
+        let predictionType;
+
+        if (mode === 1) { // คำทำนายหลัก (ยามกำเนิด)
+            currentPhase = window.initialLunarPhase;
+            currentYamIdx = window.initialYamIndex;
+            predictionType = "คำทำนายหลัก (ยามกำเนิด)";
+            
+            if (currentYamIdx === -1) {
+                alert("⚠️ ยังไม่ได้จับยามกำเนิด กรุณาเข้าเมนู 'จับยามสามตา' อีกครั้งเพื่อให้ระบบจับยามแรกที่เข้าได้");
+                return;
+            }
+        } else { // คำทำนายจร
+            if (typeof updateHomeClock === 'function') updateHomeClock();
+            currentPhase = window.currentLunarPhase;
+            currentYamIdx = window.currentYamIndex;
+            predictionType = "คำทำนายจร (ยามปัจจุบัน)";
+        }
+        
+        if (currentYamIdx < 0) {
+            alert("⚠️ ไม่สามารถระบุยามอัฏฐกาลได้ในขณะนี้ (นอกช่วง 8 ยาม)");
+            return;
+        }
+        
+        const result = getPredictionResult(currentPhase, currentYamIdx);
+        
+        const resultBox = document.getElementById('yamResultBox');
+        if(resultBox) resultBox.style.display = 'block';
+        
+        const outputEl = document.getElementById('yamResultOutput');
+        const explEl = document.getElementById('yamResultExplanation');
+        
+        if(outputEl) outputEl.innerHTML = `<h2 style="color:#ef4444; margin-bottom:0;">${result.symbol.toUpperCase()}</h2>`;
+        if(explEl) explEl.innerHTML = `
+            <p><b>คำถาม:</b> "${question}"</p>
+            <p style="font-weight:bold; color:#10b981;">ผลการทำนาย: ${result.meaning}</p>
+            <p style="font-size:12px; color:#6b7280;">(${predictionType}: นับจาก ${currentPhase} ยามที่ ${currentYamIdx + 1})</p>
+        `;
+    }
+    
+    // ตั้งค่าเริ่มต้นเมื่อโหลดหน้า
+    if (typeof updateHomeClock === 'function') {
+        updateHomeClock();
+        setInterval(updateHomeClock, 1000); 
+    }
+</script>
+
+</body>
+</html>

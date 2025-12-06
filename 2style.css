@@ -1,0 +1,109 @@
+/* =========================================
+   1. CORE & MAIN THEME
+   ========================================= */
+body { font-family: 'Sarabun', sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 0; overflow-x: hidden; }
+* { box-sizing: border-box; outline: none; }
+h1,h2,h3 { margin: 0 0 10px 0; }
+
+/* --- UI STRUCTURE --- */
+header { background: #1e293b; padding: 15px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.4); display: flex; justify-content: space-between; align-items: center; }
+.brand { font-size: 20px; font-weight: 700; color: #fbbf24; }
+.menu-btn { background: #334155; border: 1px solid #475569; color: white; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 16px; }
+
+.sidebar { position: fixed; top: 0; left: -280px; width: 260px; height: 100%; background: #1e293b; box-shadow: 4px 0 20px rgba(0,0,0,0.5); z-index: 200; transition: 0.3s ease-in-out; padding-top: 60px; overflow-y: auto; }
+.sidebar.active { left: 0; }
+.sidebar a { display: block; padding: 15px 25px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid #334155; transition: 0.2s; }
+.sidebar a.active { background: #334155; color: #fbbf24; border-left: 4px solid #fbbf24; }
+
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 150; display: none; }
+.overlay.active { display: block; }
+
+.container { max-width: 1100px; margin: 20px auto; padding: 20px; min-height: 80vh; }
+.app-section { display: none; animation: fadeIn 0.4s; }
+.app-section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- ELEMENTS --- */
+.big-btn { width: 100%; padding: 15px; background: linear-gradient(135deg, #d97706, #b45309); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.big-btn:hover { transform: translateY(-2px); }
+
+.profile-manager { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 20px; }
+.input-group { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 10px; margin-bottom: 10px; }
+input, select, textarea { width: 100%; padding: 12px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; font-size: 14px; }
+
+/* --- HOME CARD --- */
+.home-card { background: #1e293b; padding:25px; border-radius:12px; border: 1px solid #334155; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top:20px; }
+.home-card h2 { color: #fbbf24; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+.time-display { text-align: center; font-size: 2.5rem; font-weight: 700; color: #38bdf8; margin: 10px 0; font-variant-numeric: tabular-nums; }
+.date-display { text-align: center; color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.info-item { background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
+.info-label { font-size: 0.9rem; color: #94a3b8; display: block; margin-bottom: 5px; }
+.info-value { font-size: 1.1rem; font-weight: 600; color: #e2e8f0; }
+.status-good { color: #10b981; }
+.status-bad { color: #ef4444; }
+
+/* Charts */
+.zodiac-chart { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; background: #cbd5e1; padding: 5px; border-radius: 12px; margin-bottom: 20px; }
+.zodiac-box { background: #fff; color: #1e293b; min-height: 90px; border-radius: 6px; position: relative; font-size: 12px; display: flex; flex-direction: column; align-items: center; padding: 4px; }
+.zodiac-name { font-size: 10px; color: #64748b; width: 100%; text-align: center; border-bottom: 1px solid #eee; margin-bottom: 4px; }
+
+.planet-symbol { display: inline-block; font-size: 11px; font-weight: bold; margin: 1px; padding: 2px 4px; border-radius: 4px; background: #f1f5f9; border: 1px solid #cbd5e1; white-space: nowrap; }
+.planet-symbol.lagna { background: #ef4444; color: white; border-color: #b91c1c; }
+.planet-symbol.std-kaset { background: #dcfce7; color: #15803d; border-color: #15803d; }
+.planet-symbol.std-ucha { background: #fef3c7; color: #b45309; border-color: #b45309; }
+
+.prediction-box { background: #fff; color: #333; padding: 20px; border-radius: 12px; border-left: 5px solid #d97706; position: relative; margin-bottom: 20px; }
+.inthaphat-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+.inthaphat-table th { background: #d97706; color: white; padding: 8px; text-align: left; }
+.inthaphat-table td { border-bottom: 1px solid #eee; padding: 8px; color: #333; }
+
+.result-box { background: #fff; color: #333; padding: 25px; border-radius: 12px; text-align: center; margin-top: 20px; border: 1px solid #e2e8f0; min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.result-box img { width: 140px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+.house-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.house-card { background: white; color: #1e293b; padding: 12px; border-radius: 8px; border-top: 4px solid #8b5cf6; }
+.mini-btn { background: #8b5cf6; color: white; width: 100%; border: none; padding: 6px; border-radius: 20px; margin-top: 8px; cursor: pointer; font-size: 12px; }
+
+/* --- PRO SECTION --- */
+.pro-wrap { max-width:1100px; margin:0 auto; }
+.pro-card { background:#071a2a; padding:18px; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,0.6); border: 1px solid #203044; }
+.pro-tabs { display:flex; gap:8px; margin-bottom:12px; }
+.pro-tab { padding:10px 14px; border-radius:8px; cursor:pointer; background:#0f2a3a; color:#cfe9ff; transition:0.2s; }
+.pro-tab.active { background:#1e90ff; color:#fff; }
+.pro-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:15px; }
+.pro-card input, .pro-card select, .pro-card textarea, .pro-card button { width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #203044; background:#072033; color:#e6eef8; font-size:15px; box-sizing:border-box; }
+.pro-card button { background:#10b981; border:none; color:white; font-weight:700; cursor:pointer; transition:0.2s; }
+.pro-result { background:#fff; color:#111; padding:14px; border-radius:10px; margin-top:12px; white-space:pre-wrap; font-family:'Sarabun', sans-serif; max-height:520px; overflow:auto; border:1px solid #ccc; }
+.pro-label { font-weight:700; color:#cfe9ff; font-size:14px; display:block; margin-top:10px; }
+.pro-row { display:flex; gap:8px; }
+.pro-row input { flex:1; }
+/* --- ส่วนที่ต้องตรวจสอบ/ปรับแก้ใน style.css เดิม --- */
+
+header {
+    /* ต้องมีสองบรรทัดนี้เพื่อให้โลโก้ซ้าย ปุ่มขวา */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* โค้ดอื่นๆ ของ header เดิม */
+    background-color: #1f2937; /* ตัวอย่างจากโค้ดที่คุณส่งมา */
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* หากมี CSS สำหรับ .menu-btn ให้คงไว้ */
+
+/* การจัดวางในเมนู 8 (จับยามสามตา) */
+.info-grid {
+    /* ค่าเริ่มต้นอาจจะเป็น 2 คอลัมน์ ให้แน่ใจว่าสำหรับเมนู 8 ถูกตั้งค่าเป็น 1 คอลัมน์ */
+    display: grid;
+    /*... อื่นๆ ...*/
+}
+
+/* เพิ่มส่วนที่ override สำหรับเมนู 8 */
+#yamsamtah .profile-manager .info-grid {
+    grid-template-columns: 1fr !important; /* บังคับให้เป็น 1 คอลัมน์ แยกบรรทัด */
+    gap: 0; /* ปรับช่องว่าง */
+}
